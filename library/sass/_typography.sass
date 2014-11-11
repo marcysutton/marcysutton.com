@@ -1,0 +1,63 @@
+@import 'utils/webfonts'
+
+$default_font: 'robotomedium', Helvetica, sans-serif
+$italic_font: 'robotoitalic', Helvetica, sans-serif
+$headline_font: $default_font
+$site_title_font: 'manu_negra_regular', serif 
+
+html
+  font-family: $default_font
+  font-size: 16px
+  line-height: 1.5
+  -webkit-font-smoothing: antialiased
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, strong
+  font-weight: 500
+  font-family: $headline_font
+  text-rendering: optimizelegibility
+
+h1, .h1
+  font-size: 2.5em
+  line-height: 1.333em
+
+h2, .h2
+  font-size: 1.75em
+  line-height: 1.4em
+  margin-bottom: 0.375em
+
+h3, .h3
+  font-size: 1.125em
+
+h4, .h4
+  font-size: 1.1em
+  font-weight: 700
+
+h5, .h5
+  font-size: 0.846em
+  line-height: 2.09em
+  text-transform: uppercase
+  letter-spacing: 2px
+
+em, blockquote, .italic
+  font-family: $italic_font
+
+p
+  -ms-word-break: break-all
+  -ms-word-wrap: break-all
+  word-break: break-word
+  word-break: break-word
+  // cleaning up the ragged lines and breaks
+  -webkit-hyphens: auto
+  -moz-hyphens: auto
+  hyphens: auto
+  // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 2
+  -webkit-hyphenate-after: 3
+  hyphenate-lines: 3
+  // enabling fancy ligatures when available
+  -webkit-font-feature-settings: "liga", "dlig"
+  -moz-font-feature-settings: "liga=1, dlig=1"
+  -ms-font-feature-settings: "liga", "dlig"
+  -o-font-feature-settings: "liga", "dlig"
+  font-feature-settings: "liga", "dlig"
+
