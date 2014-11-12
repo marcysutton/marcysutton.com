@@ -2,10 +2,10 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="cf">
 
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-
+						<main>
+							<div class="wrap padded-top">
 							<?php if (is_category()) { ?>
 								<h1 class="archive-title h2">
 									<span><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></span> <?php single_cat_title(); ?>
@@ -88,9 +88,9 @@
 
 							<?php endif; ?>
 
-						</div>
-
-					<?php get_sidebar(); ?>
+							<?php get_sidebar(); ?>
+							</div>
+						</main>
 
 				</div>
 

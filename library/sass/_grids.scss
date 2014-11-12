@@ -1,0 +1,33 @@
+// Requirements
+// ============
+
+@import "susy";
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+);
+
+.primary {
+	@include span(65%);
+}
+.secondary {
+	@include span(30%);
+	margin-left: span(5%);
+}
+
+@media #{$mobile} {
+	.wrap {
+		display: block;
+	}
+	.primary {
+		@include span(100%);
+		float: none;
+	}
+	.secondary {
+		@include span(100%);
+		float: none;
+		margin-left: 0;
+		padding-top: $default_padding*3;
+	}
+}

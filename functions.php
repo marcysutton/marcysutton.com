@@ -158,12 +158,21 @@ function bones_register_sidebars() {
 		'id' => 'sidebar1',
 		'name' => __( 'Sidebar 1', 'bonestheme' ),
 		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s hero-article-list">',
 		'after_widget' => '</div>',
 		'before_title' => '<h2 class="widgettitle">',
 		'after_title' => '</h2>',
 	));
 
+  register_sidebar(array(
+    'id' => 'above_footer',
+    'name' => __( 'Above Footer', 'bonestheme' ),
+    'description' => __( 'The instagram/footer sidebar.', 'bonestheme' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2 class="widgettitle visuallyhidden">',
+    'after_title' => '</h2>',
+  ));
 	/*
 	to add more sidebars or widgetized areas, just copy
 	and edit the above sidebar code. In order to call

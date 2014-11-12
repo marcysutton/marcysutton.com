@@ -2,12 +2,12 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="cf">
 
-					<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-
+					<main>
+						<div class="wrap padded-top">
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
+							
 							<?php
 								/*
 								 * Ah, post formats. Nature's greatest mystery (aside from the sloth).
@@ -29,7 +29,7 @@
 
 						<?php else : ?>
 
-							<article id="post-not-found" class="hentry cf">
+							<article id="post-not-found" class="hentry cf primary">
 									<header class="article-header">
 										<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 									</header>
@@ -43,9 +43,9 @@
 
 						<?php endif; ?>
 
-					</div>
-
 					<?php get_sidebar(); ?>
+					</div>
+					</main>
 
 				</div>
 

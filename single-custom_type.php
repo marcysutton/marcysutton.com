@@ -19,13 +19,14 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="cf">
 
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+						<main>
+						<div class="wrap padded-top">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+						<!-- single-custom_type.php -->
+							<article id="post-<?php the_ID(); ?>" <?php post_class('primary'); ?>>
 
 								<header class="article-header">
 
@@ -89,9 +90,9 @@
 
 							<?php endif; ?>
 
-						</div>
-
 						<?php get_sidebar(); ?>
+						</div>
+						</main>
 
 				</div>
 

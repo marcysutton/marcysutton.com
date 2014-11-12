@@ -1,7 +1,8 @@
 @import 'utils/webfonts'
 
 $default_font: 'robotomedium', Helvetica, sans-serif
-$italic_font: 'robotoitalic', Helvetica, sans-serif
+$italic_font: 'robotomediummedium_italic', Helvetica, sans-serif
+$bold_font: 'robotobold', Helvetica, sans-serif
 $headline_font: $default_font
 $site_title_font: 'manu_negra_regular', serif 
 
@@ -11,7 +12,7 @@ html
   line-height: 1.5
   -webkit-font-smoothing: antialiased
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, strong
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5
   font-weight: 500
   font-family: $headline_font
   text-rendering: optimizelegibility
@@ -26,7 +27,7 @@ h2, .h2
   margin-bottom: 0.375em
 
 h3, .h3
-  font-size: 1.125em
+  font-size: 1.25em
 
 h4, .h4
   font-size: 1.1em
@@ -38,8 +39,33 @@ h5, .h5
   text-transform: uppercase
   letter-spacing: 2px
 
+strong
+  font-family: $bold_font
+  
 em, blockquote, .italic
+  font-style: normal
   font-family: $italic_font
+
+.offsite-link
+  a
+    text-decoration: none
+    
+    .inline-link
+      display: inline-block
+      text-decoration: underline
+
+    .icon-newtab:before
+      font-size: 0.8em
+      margin-left: 0.25em
+
+.more-link
+  text-decoration: none
+
+  &.button
+    padding: 0 1em
+
+  &:after
+    content: '\2192'
 
 p
   -ms-word-break: break-all

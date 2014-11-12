@@ -18,7 +18,7 @@ body#tinymce.wp-editor {
 
 	// normalize: http://necolas.github.io/normalize.css/
 	@import "normalize";
-
+	@import "compass/css3/font-face";
 	// Sass variables
 	@import "variables";
 
@@ -32,7 +32,7 @@ body#tinymce.wp-editor {
 	@import "mixins";
 
 	width: 731px;
-	font-family: $defaultFont;
+	font-family: $default_font;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $foreground_color;

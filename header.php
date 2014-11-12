@@ -33,7 +33,7 @@
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
-
+		<script src="<?php echo get_template_directory_uri(); ?>/library/js/instafeed.min.js"></script>
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 

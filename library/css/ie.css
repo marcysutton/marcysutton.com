@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******************************************************************
 Site Name:
 Author:
@@ -18,18 +19,44 @@ understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
 ******************************************************************/
 @font-face {
-  font-family: "robotoregular";
-  src: url('../../fonts/roboto-regular-webfont.eot?1415696608') format('embedded-opentype'), url('../../fonts/roboto-regular-webfont.eot?&1415696608#iefix') format('embedded-opentype'), url('../../fonts/roboto-regular-webfont.woff2?1415696608') format('woff2'), url('../../fonts/roboto-regular-webfont.woff?1415696608') format('woff'), url('../../fonts/roboto-regular-webfont.ttf?1415696608') format('truetype'), url('../../fonts/roboto-regular-webfont.svg?1415696608#robotoregular') format('svg');
-}
-@font-face {
   font-family: "robotomedium";
   src: url('../../fonts/roboto-medium-webfont.eot?1415696608') format('embedded-opentype'), url('../../fonts/roboto-medium-webfont.eot?&1415696608#iefix') format('embedded-opentype'), url('../../fonts/roboto-medium-webfont.woff2?1415696608') format('woff2'), url('../../fonts/roboto-medium-webfont.woff?1415696608') format('woff'), url('../../fonts/roboto-medium-webfont.ttf?1415696608') format('truetype'), url('../../fonts/roboto-medium-webfont.svg?1415696608#robotomedium') format('svg');
+}
+@font-face {
+  font-family: "robotobold";
+  src: url('../../fonts/roboto-bold-webfont.eot?1415739198') format('embedded-opentype'), url('../../fonts/roboto-bold-webfont.eot?&1415739198#iefix') format('embedded-opentype'), url('../../fonts/roboto-bold-webfont.woff2?1415739198') format('woff2'), url('../../fonts/roboto-bold-webfont.woff?1415739198') format('woff'), url('../../fonts/roboto-bold-webfont.ttf?1415739198') format('truetype'), url('../../fonts/roboto-bold-webfont.svg?1415739198#robotobold') format('svg');
+}
+@font-face {
+  font-family: "robotomediummedium_italic";
+  src: url('../../fonts/roboto-mediumitalic-webfont.eot?1415696608') format('embedded-opentype'), url('../../fonts/roboto-mediumitalic-webfont.eot?&1415696608#iefix') format('embedded-opentype'), url('../../fonts/roboto-mediumitalic-webfont.woff2?1415696608') format('woff2'), url('../../fonts/roboto-mediumitalic-webfont.woff?1415696608') format('woff'), url('../../fonts/roboto-mediumitalic-webfont.ttf?1415696608') format('truetype'), url('../../fonts/roboto-mediumitalic-webfont.svg?1415696608#robotomedium_italic') format('svg');
 }
 @font-face {
   font-family: "manu_negra_regular";
   src: url('../../fonts/wcmanonegrabta-webfont.eot?1415710958') format('embedded-opentype'), url('../../fonts/wcmanonegrabta-webfont.eot?&1415710958#iefix') format('embedded-opentype'), url('../../fonts/wcmanonegrabta-webfont.woff2?1415710958') format('woff2'), url('../../fonts/wcmanonegrabta-webfont.woff?1415710958') format('woff'), url('../../fonts/wcmanonegrabta-webfont.ttf?1415710958') format('truetype'), url('../../fonts/wcmanonegrabta-webfont.svg?1415710958#wc_mano_negra_btaregular') format('svg');
 }
-/* line 8, ../sass/_typography.sass */
+@font-face {
+  font-family: "icomoon";
+  src: url('../../fonts/icomoon.eot?-xsbv7j&1415784292') format('embedded-opentype'), url('../../fonts/icomoon.eot?&1415784292#iefix-xsbv7j') format('embedded-opentype'), url('../../fonts/icomoon.woff?-xsbv7j&1415784292') format('woff'), url('../../fonts/icomoon.ttf?-xsbv7j&1415784292') format('truetype'), url('../../fonts/icomoon.svg?-xsbv7j&1415784292#icomoon') format('svg');
+}
+/* line 12, ../sass/utils/_webfonts.sass */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 23, ../sass/utils/_webfonts.sass */
+.icon-newtab:before {
+  content: "";
+}
+
+/* line 9, ../sass/_typography.sass */
 html {
   font-family: "robotomedium", Helvetica, sans-serif;
   font-size: 16px;
@@ -37,38 +64,38 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 14, ../sass/_typography.sass */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, strong {
+/* line 15, ../sass/_typography.sass */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-weight: 500;
   font-family: "robotomedium", Helvetica, sans-serif;
   text-rendering: optimizelegibility;
 }
 
-/* line 19, ../sass/_typography.sass */
+/* line 20, ../sass/_typography.sass */
 h1, .h1 {
   font-size: 2.5em;
   line-height: 1.333em;
 }
 
-/* line 23, ../sass/_typography.sass */
+/* line 24, ../sass/_typography.sass */
 h2, .h2 {
   font-size: 1.75em;
   line-height: 1.4em;
   margin-bottom: 0.375em;
 }
 
-/* line 28, ../sass/_typography.sass */
+/* line 29, ../sass/_typography.sass */
 h3, .h3 {
-  font-size: 1.125em;
+  font-size: 1.25em;
 }
 
-/* line 31, ../sass/_typography.sass */
+/* line 32, ../sass/_typography.sass */
 h4, .h4 {
   font-size: 1.1em;
   font-weight: 700;
 }
 
-/* line 35, ../sass/_typography.sass */
+/* line 36, ../sass/_typography.sass */
 h5, .h5 {
   font-size: 0.846em;
   line-height: 2.09em;
@@ -76,12 +103,46 @@ h5, .h5 {
   letter-spacing: 2px;
 }
 
-/* line 41, ../sass/_typography.sass */
-em, blockquote, .italic {
-  font-family: "robotoitalic", Helvetica, sans-serif;
+/* line 42, ../sass/_typography.sass */
+strong {
+  font-family: "robotobold", Helvetica, sans-serif;
 }
 
-/* line 44, ../sass/_typography.sass */
+/* line 45, ../sass/_typography.sass */
+em, blockquote, .italic {
+  font-style: normal;
+  font-family: "robotomediummedium_italic", Helvetica, sans-serif;
+}
+
+/* line 50, ../sass/_typography.sass */
+.offsite-link a {
+  text-decoration: none;
+}
+/* line 53, ../sass/_typography.sass */
+.offsite-link a .inline-link {
+  display: inline-block;
+  text-decoration: underline;
+}
+/* line 57, ../sass/_typography.sass */
+.offsite-link a .icon-newtab:before {
+  font-size: 0.8em;
+  margin-left: 0.25em;
+}
+
+/* line 61, ../sass/_typography.sass */
+.more-link {
+  text-decoration: none;
+}
+/* line 64, ../sass/_typography.sass */
+.more-link.button {
+  padding: 0 1em;
+}
+/* line 67, ../sass/_typography.sass */
+.more-link:after {
+  content: "→";
+}
+
+/* line 70, ../sass/_typography.sass */
 p {
   -ms-word-break: break-all;
   -ms-word-wrap: break-all;
@@ -98,6 +159,11 @@ p {
   -ms-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig";
+}
+
+/* line 38, ../sass/_variables.scss */
+.muted {
+  color: #abb29f;
 }
 
 /* line 3, ../sass/_color.sass */
@@ -117,7 +183,7 @@ a {
 }
 /* line 13, ../sass/_color.sass */
 a:focus, a:hover {
-  color: #00D6DD;
+  color: #00a0a5;
 }
 /* line 16, ../sass/_color.sass */
 a:link {
@@ -125,23 +191,40 @@ a:link {
 }
 
 /* line 20, ../sass/_color.sass */
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: #13140F;
-  text-decoration: underline;
+.offsite-link .icon-newtab:before {
+  color: #abb29f;
 }
+
 /* line 24, ../sass/_color.sass */
-h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus, h6 a:hover, h6 a:focus {
-  color: #13140F;
+.alt .more-link {
+  color: #abb29f;
 }
 
 /* line 27, ../sass/_color.sass */
+.more-link.button {
+  background-color: #9fbf00;
+  box-shadow: 1px 1px 2px #898987;
+}
+/* line 31, ../sass/_color.sass */
+.more-link.button:hover, .more-link.button:focus {
+  background-color: #00a0a5;
+  color: #F5FFE4;
+}
+
+/* line 35, ../sass/_color.sass */
 button {
   border: 1px solid;
 }
-/* line 30, ../sass/_color.sass */
+/* line 38, ../sass/_color.sass */
 button:focus, button:hover {
   border-color: #13140F;
   background-color: #13140F;
+  color: #F5FFE4;
+}
+
+/* line 43, ../sass/_color.sass */
+.alt {
+  background-color: #333;
   color: #F5FFE4;
 }
 
@@ -361,13 +444,8 @@ NAVIGATION STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 144, ../sass/breakpoints/_768up.scss */
-aside, .sidebar {
-  margin-top: 2.2em;
-}
-
 /* line 148, ../sass/breakpoints/_768up.scss */
-.widgettitle {
+.widgettitle:not(.no-border) {
   border-bottom: 2px solid #444;
   margin-bottom: 0.75em;
 }
@@ -375,7 +453,6 @@ aside, .sidebar {
 /* line 153, ../sass/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
-  margin: 2.2em 0;
 }
 /* line 158, ../sass/breakpoints/_768up.scss */
 .widget ul li {

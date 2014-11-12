@@ -2,14 +2,15 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="cf">
 
-					<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+					<main>
+						<div class="wrap padded-top">
 						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class('primary'); ?>>
 
 								<header class="article-header">
 
@@ -21,10 +22,10 @@
 
 								</header>
 
-								<section class="entry-content">
+								<div class="entry-content">
 										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonestheme' ) . '</span>' ); ?>
 
-								</section>
+								</div>
 
 								<footer class="article-footer">
 									
@@ -58,9 +59,9 @@
 
 							<?php endif; ?>
 
-						</div>
-
 							<?php get_sidebar(); ?>
+							</div>
+						</main>
 
 					</div>
 

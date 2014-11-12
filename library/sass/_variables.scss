@@ -1,9 +1,11 @@
 $background_color: 	#F5FFE4;
 $foreground_color: 	#13140F;
+$alt_background_color: #333;
 $alt_foreground_color: #68776C;
-$href_color: 				$foreground_color; 
-$alt_href_color: 		#D4FF00;
-$active_color: 			#00D6DD;
+$tinted_white:			shade($background_color, 30%);
+$href_color: 				$foreground_color;
+$alt_href_color: 		shade(#D4FF00, 25%);
+$active_color: 			shade(#00D6DD, 25%);
 
 $alert-yellow:      #ebe16f;
 $alert-red:         #fbe3e4;
@@ -16,7 +18,7 @@ $white:             #fff;
 $light-gray:        #f8f9fa;
 $gray:              #eaedf2;
 $text-color:        #5c6b80;
-$meta-gray:         #9fa6b4;
+$meta-gray:         $alt_foreground_color;
 
 $tan:               #eceee5;
 
@@ -32,3 +34,7 @@ $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;
 
 $default_padding: 	1rem;
+
+.muted {
+	color: $tinted_white;
+}

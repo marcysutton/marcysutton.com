@@ -11,6 +11,7 @@ and will be used across all viewports.
 
 ******************************************************************/
 
+$mobile: "(max-width: 640px)";
 $tablet: "(min-width: 768px) and (max-width: 1023px)";
 $desktop: "(min-width: 1024px)";
 
@@ -61,8 +62,7 @@ LAYOUT & GRID STYLES
 .wrap {
 	display: flex;
 	height: 100%;
-	flex-direction: column;
-	// width: 96%;
+	flex-direction: row;
 	margin: 0 auto;
 }
 

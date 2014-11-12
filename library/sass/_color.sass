@@ -16,13 +16,21 @@ a
 	&:link
 		-webkit-tap-highlight-color: rgba( 0, 0, 0, 0.3 )
 
-h1, h2, h3, h4, h5, h6
-	a
-		color: $foreground_color
-		text-decoration: underline
+.offsite-link
+	.icon-newtab:before
+		color: $tinted_white
+		
+.alt
+	.more-link
+		color: $tinted_white
 
-		&:hover, &:focus
-			color: $href_color
+.more-link.button
+	background-color: $alt_href_color
+	box-shadow: 1px 1px 2px tint($foreground_color, 50%)
+
+	&:hover, &:focus
+		background-color: $active_color
+		color: $background_color
 
 button
 	border: 1px solid
@@ -31,3 +39,7 @@ button
 		border-color: $foreground_color
 		background-color: $foreground_color
 		color: $background_color
+
+.alt
+	background-color: $alt_background_color
+	color: $background_color

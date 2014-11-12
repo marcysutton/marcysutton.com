@@ -41,7 +41,7 @@ textarea,
   display: block;
   height: 40px;
   line-height: 40px;
-  padding: 0 12px;
+  padding: 2px 12px;
   margin-bottom: 14px;
   font-size: 1em;
   color: $foreground_color;
@@ -52,13 +52,13 @@ textarea,
   width: 100%;
   max-width: 400px;
   font-family: $default_font;
-  background-color: $alt_foreground_color;
+  background-color: tint($alt_foreground_color, 50%);
   @include transition(background-color 0.24s ease-in-out);
 
   // a focused input (or hovered on)
   &:focus,
   &:active {
-    background-color: lighten($alt_foreground_color, 4%);
+    background-color: tint($alt_foreground_color, 40%);
   } // end hover or focus
 
   // error notification

@@ -1,0 +1,30 @@
+.hero {
+	padding-bottom: $default_padding*6;
+
+	.hero-excerpt {
+		margin-bottom: 1.5em;
+	}
+	.hero-links {
+		margin: 0 $default_padding;
+
+		h2, h3 {
+			margin: 0;
+		}
+		.more-link {
+		  font-size: 0.9em;
+			float: none;
+			display: inline-block;
+			margin-top: 1.5em;
+	  }
+	}
+
+	@media #{$desktop} {
+		.hero-links {
+			.more-link {
+				display: block;
+		  	float: right;
+		  	margin: 0;
+			}
+		}
+	}
+}

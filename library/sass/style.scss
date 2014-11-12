@@ -5,21 +5,23 @@
 
 @import "compass/css3/font-face";
 
-// typography
-@import "typography";
-
 @import "variables";
 @import "color";
+
+@import "utils/utils";
+// typography
+@import "typography";
 
 // import mixins
 @import "mixins";
 
 @import "layout";
-// the grid
-@import "grid";
+
+// styles in base.scss
+@import "breakpoints/base";
 
 // the grid
-// @import "layout";
+@import "grids";
 
 /*********************
 IMPORTING MODULES
@@ -38,15 +40,8 @@ you hate oysters, then the world is your peanut butter & jelly sandwich.
 // forms (inputs & labels)
 @import "modules/forms";
 
-/*********************
-BASE (MOBILE) SIZE
-This are the mobile styles. It's what people see on their phones. If
-you set a great foundation, you won't need to add too many styles in
-the other stylesheets. Remember, keep it light: Speed is Important.
-*********************/
-
-// styles in base.scss
-@import "breakpoints/base";
+@import "modules/lists";
+@import "modules/hero";
 
 /*********************
 LARGER MOBILE DEVICES

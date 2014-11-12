@@ -1,0 +1,35 @@
+body {
+	background-image: url(../../img/sprinkles.png);
+	background-repeat: repeat;
+}
+
+main {
+	align-items: top;
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	justify-content: center;
+	overflow: auto;
+	position: relative;
+}
+
+section .wrap, .wrap {
+	flex-direction: row;
+}
+section {
+	margin: 0 $default_padding;
+	width: 100%;
+
+	&.alt {
+		@extend .padded-top;
+		margin: 0;
+	}
+	.vert-align {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+iframe, object {
+	width: 100%;
+}
