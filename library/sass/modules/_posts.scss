@@ -1,99 +1,9 @@
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-
-#content {
-	margin-top: 1.5em;
-}
-
-iframe, object {
-	height: 100%;
-	width: 100%;
-}
-
-	.hentry {
-		background-color: $white;
-		border-radius: 3px;
-		margin-bottom: 1.5em;
-		border: 1px solid $border-color;
-
-		header {
-			border-bottom: 1px solid $light-gray;
-			padding: 1.5em;
-		}
-
-		footer {
-			padding: 1.5em;
-			border-top: 1px solid $light-gray;
-
-			p {
-				margin: 0;
-			}
-		}
-
-	} /* end .hentry */
-
-	.single-title,
-	.page-title,
-	.entry-title {
-		margin: 0;
-	}
-
-	.single-title {}
-
-	.page-title {}
-
-	.entry-title {}
-
-	.archive-title {}
-
-	/* want to style individual post classes? Booya! */
-	.post-id {}         /* post by id (i.e. post-3) */
-	.post {}            /* general post style */
-	.page {}            /* general article on a page style */
-	.attachment {}      /* general style on an attatchment */
-	.sticky {}          /* sticky post style */
-	.hentry {}          /* hentry class */
-	.category-slug {}   /* style by category (i.e. category-videos) */
-	.tag-slug {}        /* style by tag (i.e. tag-news) */
-
-	/* post meta */
-	.byline {
-		color: $meta-gray;
-		font-style: italic;
-		margin: 0;
-
-		time {}
-	}
-
-	/* entry content */
+	
 	.entry-content {
-		padding: 1.5em 1.5em 0;
-
-		p {
-			margin: 0 0 1.5em;
-		}
-
-
-		ul, ol, table, dl {}
-
-		ul, ol {
-
-			li {}
-
-		}
-
-		ul {
-
-			li {}
-
-		}
-
-		ol {
-
-			li {}
-
-		}
+		padding-bottom: $default_padding*2;
 
 		table {
 			width: 100%;
@@ -137,14 +47,19 @@ iframe, object {
 		}
 
 		blockquote {
-			margin: 0 0 1.5em 0.75em;
-			padding: 0 0 0 0.75em;
-			border-left: 3px solid;
-			font-style: italic;
-			color: $meta-gray;
+			// margin: 0 0 1.5em 0.75em;
+			// padding: 0 0 0 0.75em;
+			// border-left: 3px solid;
+			// font-style: italic;
+			// color: $meta-gray;
 
 			&:before {}
 
+		}
+		
+		ul {
+			list-style: disc;
+			list-style-position: inside;
 		}
 
 		dl {}
@@ -159,20 +74,14 @@ iframe, object {
 		}
 
 		img {
-			margin: 0 0 1.5em 0;
+			box-shadow: 1px 1px 3px #333;
 			max-width: 100%;
 			height: auto;
-		}
 
-		/*
-		image alignment on a screen this size may be
-		a bit difficult. It's set to start aligning
-		and floating images at the next breakpoint,
-		but it's up to you. Feel free to change it up.
-		*/
-		.alignleft, img.alignleft {}
-		.alignright, img.alignright {}
-		.aligncenter, img.aligncenter {}
+			&.no-shadow {
+				box-shadow: none;
+			}
+		}
 
 		.size-auto,
 		.size-full,
@@ -213,33 +122,3 @@ iframe, object {
 		}
 
 	} /* end .wp-caption */
-
-	/* image gallery styles */
-	.gallery {
-
-		dl {
-
-			a {}
-
-			img {}
-
-		}
-
-		dt {}
-
-		dd {}
-
-	} /* end .gallery */
-
-	/* gallery caption styles */
-	.gallery-caption {}
-
-	.size-full {}
-	.size-large {}
-	.size-medium {}
-	.size-thumbnail {}
-
-// the tag output
-.tags {
-	margin: 0;
-}

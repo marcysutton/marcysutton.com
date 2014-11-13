@@ -17,26 +17,21 @@
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-		<!--[if IE]>
-			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		<![endif]-->
-		<?php // or, set /favicon.ico for IE10 win ?>
-		<meta name="msapplication-TileColor" content="#f01d4f">
-		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
+		<meta property="og:url" content="<?php echo "http://" . $_SERVER['HTTP_HOST']  . $_SERVER['REQUEST_URI']; ?>" /> 
+		<?php if(is_single()){ $desc = ''; } else { $desc = 'The personal website of Marcy Sutton, Web Developer and Accessibility Advocate';} ?>
+		<meta property="og:description" content="<?php echo $desc; ?>" />
+		<meta name="description" content="<?php echo $desc; ?>" />
+		<link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/library/images/ms-facebook-image-600.jpg" /> 
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
-		<script src="<?php echo get_template_directory_uri(); ?>/library/js/instafeed.min.js"></script>
-		<?php // drop Google Analytics Here ?>
-		<?php // end analytics ?>
 
+		<?php include('header-sharing.php'); ?>
+
+		<script src="<?php echo get_template_directory_uri(); ?>/library/js/instafeed.min.js"></script>
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -46,13 +41,16 @@
 			<header class="header" role="banner">
 
 				<div id="inner-header" class="wrap cf">
-
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
-
+					<?php if(is_home()):
+							$tag_name = 'h1';
+						else :
+							$tag_name = 'p';
+						endif;
+					?>
+					<a class="site-logo" href="<?php echo home_url(); ?>" rel="nofollow">
+						<<?php echo $tag_name; ?> class="site-logo-type h1"><?php bloginfo('name'); ?></<?php echo $tag_name; ?>>
+						<p class="site-tagline"><?php bloginfo('description'); ?></p>
+					</a>
 
 					<nav role="navigation">
 						<?php wp_nav_menu(array(

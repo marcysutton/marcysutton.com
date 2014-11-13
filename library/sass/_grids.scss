@@ -9,25 +9,49 @@ $susy: (
 );
 
 .primary {
-	@include span(65%);
+	@include span(60%);
 }
 .secondary {
 	@include span(30%);
 	margin-left: span(5%);
 }
 
-@media #{$mobile} {
+.grid-section {
+	@include span(30%);
+}
+.about-text-col {
+	margin-right: span(5%);
+}
+@media only screen and (max-width: 768px) {
 	.wrap {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
+@media #{$tablet} {
+	.grid-section {
+		@include span(45%);
+	}
+}
+@media #{$mobile} {
+	.wrap, .global-wrap {
 		display: block;
 	}
 	.primary {
-		@include span(100%);
 		float: none;
+		margin: 0 1rem;
+		width: auto;
 	}
 	.secondary {
-		@include span(100%);
 		float: none;
-		margin-left: 0;
+		margin: 0 1rem;
 		padding-top: $default_padding*3;
+		width: auto;
+	}
+
+	.grid-section {
+		float: none;
+		margin: 0;
+		width: auto;
 	}
 }

@@ -3,22 +3,52 @@ header[role=banner] {
 	background-size: cover;
 	background-repeat: no-repeat;
 	box-shadow: -3px 3px 6px $foreground_color;
-	align-items: left;
-	display: flex;
-	justify-content: left;
-	padding: $default_padding;
+	padding: 1em;
 	position: relative;
 	text-align: left;
 }
 
-.header #logo {
-	font-family: $site_title_font;
-	font-size: 3.75em;
-	margin: 0.5em 0;
-	text-transform: uppercase;
+.home {
+	header[role=banner] {
+		padding: $default_padding $default_padding $default_padding*3;
+	}
+	a.site-logo {
+		.site-logo-type {
+			font-size: 3rem;
+		}
+		.site-tagline {
+			display: block;
+		}
+	}
+}
+a.site-logo {
+	text-shadow: 2px 2px 2px $foreground_color;
+	text-decoration: none;
 
-	a {
+	.site-logo-type {
 		color: tint($background_color, 25%);
 		text-decoration: none;
+		font-family: $site_title_font;
+		font-size: 3rem;
+		line-height: 0.75;
+		margin: 0.5em 0 0;
+		text-transform: uppercase;
+
+	}
+	.site-tagline {
+		color: $shaded_white;
+		font-family: $site_title_font;
+		font-size: 2.35rem;
+		margin: 0;
+		display: none;
+	}
+
+	@media #{$mobile} {
+		.site-logo-type {
+		  font-size: 3rem;
+		}
+		.site-tagline {
+			font-size: 2rem;
+		}
 	}
 }

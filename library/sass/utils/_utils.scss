@@ -4,7 +4,11 @@
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 
+.offscreen {
+	left: -50000000px;
+	position: absolute;
+}
 
 .padded-top {
-	padding: $default_padding*4 0;
+	padding: $default_padding*3 0;
 }

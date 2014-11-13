@@ -5,54 +5,39 @@
 	<div id="inner-content" class="wrap cf">
 
 		<main>
-			<section>
-				<!-- <article id="post-<?php the_ID(); ?>" <?php post_class( 'primary' ); ?>>
+			<section class="wrap">
+			<div class="primary">
+			<?php $query = new WP_Query( 'tag=article&posts_per_page=5' ); ?>
+			 <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
+			 $do_not_duplicate = $post->ID; ?>
 
-					<h2>Recent Talk</h2>
+				<article id="post-<?php the_ID(); ?>">
 
-					<?php $my_query = new WP_Query( 'post_type=talk&posts_per_page=1' );
-					while ( $my_query->have_posts() ) : $my_query->the_post(); 
-						$do_not_duplicate = $post->ID; ?>
+					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 					
 					<?php the_excerpt(); ?>
-					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					
-					<?php endwhile; ?>
-					<p><a href="<?php get_site_url(); ?>/talks" title="More talks">More</a></p>
-				</article> -->
+				</article>
+				<?php endwhile; ?>
+
+			<?php else : ?>
+					<article id="post-not-found" class="hentry cf">
+						<header class="article-header">
+							<h2><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h2>
+						</header>
+						<section class="entry-content">
+							<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+						</section>
+						<footer class="article-footer">
+							<p><?php _e( 'This is the error message in the index.php template.', 'bonestheme' ); ?></p>
+						</footer>
+					</article>
+			<?php endif; ?>
+			</div>
 				<?php get_sidebar(); ?>
-		</section>
+			</section>
 
-		<section>
-			<aside class="secondary">
-				<h2><?php the_author_meta('description'); ?></h2>
-			</aside>
-			<article class="primary">
-				<h2>Recent Things</h2>
-				<ul class="recent-things">
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<li><?php the_title(); ?></li>
-		<?php endwhile; ?>
-				</ul>
-			</article>
-
-	<?php bones_page_navi(); ?>
-
-	<?php else : ?>
-
-	<article id="post-not-found" class="hentry cf">
-		<header class="article-header">
-			<h2><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h2>
-		</header>
-		<section class="entry-content">
-			<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-		</section>
-		<footer class="article-footer">
-			<p><?php _e( 'This is the error message in the index.php template.', 'bonestheme' ); ?></p>
-		</footer>
-	</article>
-
-	<?php endif; ?>
+			<?php bones_page_navi(); ?>
 	</main>
 
 	</div>

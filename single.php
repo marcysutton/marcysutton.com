@@ -5,6 +5,7 @@
 				<div id="inner-content" class="cf">
 
 					<main>
+						<section>
 						<div class="wrap padded-top">
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 							
@@ -43,8 +44,9 @@
 
 						<?php endif; ?>
 
-					<?php get_sidebar(); ?>
+						<?php get_sidebar(); ?>
 					</div>
+					</section>
 					</main>
 
 				</div>

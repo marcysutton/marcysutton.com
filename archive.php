@@ -5,6 +5,7 @@
 				<div id="inner-content" class="cf">
 
 						<main>
+							<section>
 							<div class="wrap padded-top">
 							<?php if (is_category()) { ?>
 								<h1 class="archive-title h2">
@@ -90,6 +91,7 @@
 
 							<?php get_sidebar(); ?>
 							</div>
+							</section>
 						</main>
 
 				</div>

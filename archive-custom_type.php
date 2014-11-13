@@ -19,7 +19,8 @@
 				<div id="inner-content" class="cf">
 
 						<main>
-						<div class="wrap padded-top">
+						<section class="wrap">
+							<div class="wrap padded-top">
 						<h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -69,6 +70,7 @@
 
 							<?php get_sidebar(); ?>
 							</div>
+							</section>
 						</main>
 
 				</div>

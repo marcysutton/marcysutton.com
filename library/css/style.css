@@ -496,16 +496,16 @@ table {
 }
 
 /* line 487, ../sass/_normalize.scss */
-.clearfix, .cf, .comment-respond {
+.clearfix, .cf {
   zoom: 1;
 }
 /* line 489, ../sass/_normalize.scss */
-.clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
+.clearfix:before, .clearfix:after, .cf:before, .cf:after {
   content: "";
   display: table;
 }
 /* line 490, ../sass/_normalize.scss */
-.clearfix:after, .cf:after, .comment-respond:after {
+.clearfix:after, .cf:after {
   clear: both;
 }
 
@@ -519,7 +519,7 @@ span.amp {
   font-style: italic;
 }
 
-/* line 38, ../sass/_variables.scss */
+/* line 39, ../sass/_variables.scss */
 .muted {
   color: #abb29f;
 }
@@ -570,17 +570,22 @@ a:link {
 }
 
 /* line 35, ../sass/_color.sass */
+.byline {
+  color: #71726f;
+}
+
+/* line 38, ../sass/_color.sass */
 button {
   border: 1px solid;
 }
-/* line 38, ../sass/_color.sass */
+/* line 41, ../sass/_color.sass */
 button:focus, button:hover {
   border-color: #13140F;
   background-color: #13140F;
   color: #F5FFE4;
 }
 
-/* line 43, ../sass/_color.sass */
+/* line 46, ../sass/_color.sass */
 .alt {
   background-color: #333;
   color: #F5FFE4;
@@ -609,236 +614,15 @@ button:focus, button:hover {
   width: auto;
 }
 
-/* line 8, ../sass/utils/_utils.scss */
+/* line 7, ../sass/utils/_utils.scss */
+.offscreen {
+  left: -50000000px;
+  position: absolute;
+}
+
+/* line 12, ../sass/utils/_utils.scss */
 .padded-top, section.alt, .instagram-feed {
-  padding: 4rem 0;
-}
-
-@font-face {
-  font-family: "robotomedium";
-  src: url('../../fonts/roboto-medium-webfont.eot?1415696608') format('embedded-opentype'), url('../../fonts/roboto-medium-webfont.eot?&1415696608#iefix') format('embedded-opentype'), url('../../fonts/roboto-medium-webfont.woff2?1415696608') format('woff2'), url('../../fonts/roboto-medium-webfont.woff?1415696608') format('woff'), url('../../fonts/roboto-medium-webfont.ttf?1415696608') format('truetype'), url('../../fonts/roboto-medium-webfont.svg?1415696608#robotomedium') format('svg');
-}
-@font-face {
-  font-family: "robotobold";
-  src: url('../../fonts/roboto-bold-webfont.eot?1415739198') format('embedded-opentype'), url('../../fonts/roboto-bold-webfont.eot?&1415739198#iefix') format('embedded-opentype'), url('../../fonts/roboto-bold-webfont.woff2?1415739198') format('woff2'), url('../../fonts/roboto-bold-webfont.woff?1415739198') format('woff'), url('../../fonts/roboto-bold-webfont.ttf?1415739198') format('truetype'), url('../../fonts/roboto-bold-webfont.svg?1415739198#robotobold') format('svg');
-}
-@font-face {
-  font-family: "robotomediummedium_italic";
-  src: url('../../fonts/roboto-mediumitalic-webfont.eot?1415696608') format('embedded-opentype'), url('../../fonts/roboto-mediumitalic-webfont.eot?&1415696608#iefix') format('embedded-opentype'), url('../../fonts/roboto-mediumitalic-webfont.woff2?1415696608') format('woff2'), url('../../fonts/roboto-mediumitalic-webfont.woff?1415696608') format('woff'), url('../../fonts/roboto-mediumitalic-webfont.ttf?1415696608') format('truetype'), url('../../fonts/roboto-mediumitalic-webfont.svg?1415696608#robotomedium_italic') format('svg');
-}
-@font-face {
-  font-family: "manu_negra_regular";
-  src: url('../../fonts/wcmanonegrabta-webfont.eot?1415710958') format('embedded-opentype'), url('../../fonts/wcmanonegrabta-webfont.eot?&1415710958#iefix') format('embedded-opentype'), url('../../fonts/wcmanonegrabta-webfont.woff2?1415710958') format('woff2'), url('../../fonts/wcmanonegrabta-webfont.woff?1415710958') format('woff'), url('../../fonts/wcmanonegrabta-webfont.ttf?1415710958') format('truetype'), url('../../fonts/wcmanonegrabta-webfont.svg?1415710958#wc_mano_negra_btaregular') format('svg');
-}
-@font-face {
-  font-family: "icomoon";
-  src: url('../../fonts/icomoon.eot?-xsbv7j&1415784292') format('embedded-opentype'), url('../../fonts/icomoon.eot?&1415784292#iefix-xsbv7j') format('embedded-opentype'), url('../../fonts/icomoon.woff?-xsbv7j&1415784292') format('woff'), url('../../fonts/icomoon.ttf?-xsbv7j&1415784292') format('truetype'), url('../../fonts/icomoon.svg?-xsbv7j&1415784292#icomoon') format('svg');
-}
-/* line 12, ../sass/utils/_webfonts.sass */
-[class^="icon-"], [class*=" icon-"] {
-  font-family: "icomoon";
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* line 23, ../sass/utils/_webfonts.sass */
-.icon-newtab:before {
-  content: "";
-}
-
-/* line 9, ../sass/_typography.sass */
-html {
-  font-family: "robotomedium", Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* line 15, ../sass/_typography.sass */
-h1, .h1, h2, .h2, .instagram-feed .widget figure figcaption, h3, .h3, h4, .h4, h5, .h5 {
-  font-weight: 500;
-  font-family: "robotomedium", Helvetica, sans-serif;
-  text-rendering: optimizelegibility;
-}
-
-/* line 20, ../sass/_typography.sass */
-h1, .h1 {
-  font-size: 2.5em;
-  line-height: 1.333em;
-}
-
-/* line 24, ../sass/_typography.sass */
-h2, .h2, .instagram-feed .widget figure figcaption {
-  font-size: 1.75em;
-  line-height: 1.4em;
-  margin-bottom: 0.375em;
-}
-
-/* line 29, ../sass/_typography.sass */
-h3, .h3 {
-  font-size: 1.25em;
-}
-
-/* line 32, ../sass/_typography.sass */
-h4, .h4 {
-  font-size: 1.1em;
-  font-weight: 700;
-}
-
-/* line 36, ../sass/_typography.sass */
-h5, .h5 {
-  font-size: 0.846em;
-  line-height: 2.09em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* line 42, ../sass/_typography.sass */
-strong {
-  font-family: "robotobold", Helvetica, sans-serif;
-}
-
-/* line 45, ../sass/_typography.sass */
-em, blockquote, .italic {
-  font-style: normal;
-  font-family: "robotomediummedium_italic", Helvetica, sans-serif;
-}
-
-/* line 50, ../sass/_typography.sass */
-.offsite-link a {
-  text-decoration: none;
-}
-/* line 53, ../sass/_typography.sass */
-.offsite-link a .inline-link {
-  display: inline-block;
-  text-decoration: underline;
-}
-/* line 57, ../sass/_typography.sass */
-.offsite-link a .icon-newtab:before {
-  font-size: 0.8em;
-  margin-left: 0.25em;
-}
-
-/* line 61, ../sass/_typography.sass */
-.more-link {
-  text-decoration: none;
-}
-/* line 64, ../sass/_typography.sass */
-.more-link.button {
-  padding: 0 1em;
-}
-/* line 67, ../sass/_typography.sass */
-.more-link:after {
-  content: "→";
-}
-
-/* line 70, ../sass/_typography.sass */
-p {
-  -ms-word-break: break-all;
-  -ms-word-wrap: break-all;
-  word-break: break-word;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-  -webkit-hyphenate-before: 2;
-  -webkit-hyphenate-after: 3;
-  hyphenate-lines: 3;
-  -webkit-font-feature-settings: "liga", "dlig";
-  -moz-font-feature-settings: "liga=1, dlig=1";
-  -ms-font-feature-settings: "liga", "dlig";
-  -o-font-feature-settings: "liga", "dlig";
-  font-feature-settings: "liga", "dlig";
-}
-
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Mixins Stylesheet
-
-This is where you can take advantage of Sass' great features: Mixins.
-I won't go in-depth on how they work exactly,
-there are a few articles below that will help do that. What I will
-tell you is that this will help speed up simple changes like
-changing a color or adding CSS3 techniques gradients.
-
-A WORD OF WARNING: It's very easy to overdo it here. Be careful and
-remember less is more.
-
-Helpful:
-http://sachagreif.com/useful-sass-mixins/
-http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
-http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
-
-******************************************************************/
-/*********************
-TRANSITION
-*********************/
-/*
-I totally rewrote this to be cleaner and easier to use.
-You'll need to be using Sass 3.2+ for these to work.
-Thanks to @anthonyshort for the inspiration on these.
-USAGE: @include transition(all 0.2s ease-in-out);
-*/
-/*********************
-CSS3 GRADIENTS
-Be careful with these since they can
-really slow down your CSS. Don't overdo it.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
-/*********************
-BOX SIZING
-*********************/
-/* @include box-sizing(border-box); */
-/* NOTE: value of "padding-box" is only supported in Gecko. So
-probably best not to use it. I mean, were you going to anyway? */
-/* line 1, ../sass/_layout.scss */
-body {
-  background-image: url(../../img/sprinkles.png);
-  background-repeat: repeat;
-}
-
-/* line 6, ../sass/_layout.scss */
-main {
-  align-items: top;
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow: auto;
-  position: relative;
-}
-
-/* line 16, ../sass/_layout.scss */
-section .wrap, .wrap {
-  flex-direction: row;
-}
-
-/* line 19, ../sass/_layout.scss */
-section {
-  margin: 0 1rem;
-  width: 100%;
-}
-/* line 23, ../sass/_layout.scss */
-section.alt {
-  margin: 0;
-}
-/* line 27, ../sass/_layout.scss */
-section .vert-align {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/* line 33, ../sass/_layout.scss */
-iframe, object {
-  width: 100%;
+  padding: 3rem 0;
 }
 
 /******************************************************************
@@ -853,83 +637,6 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
-/********************
-WORDPRESS BODY CLASSES
-style a page via class
-********************/
-/* for sites that are read right to left (i.e. hebrew) */
-/* home page */
-/* blog template page */
-/* archive page */
-/* date archive page */
-/* replace the number to the corresponding page number */
-/* search page */
-/* search result page */
-/* no results search page */
-/* individual paged search (i.e. body.search-paged-3) */
-/* 404 page */
-/* single post page */
-/* individual post page by id (i.e. body.postid-73) */
-/* individual paged single (i.e. body.single-paged-3) */
-/* attatchment page */
-/* individual attatchment page (i.e. body.attachmentid-763) */
-/* style mime type pages */
-/* author page */
-/* user nicename (i.e. body.author-samueladams) */
-/* paged author archives (i.e. body.author-paged-4) for page 4 */
-/* category page */
-/* individual category page (i.e. body.category-6) */
-/* replace the number to the corresponding page number */
-/* tag page */
-/* individual tag page (i.e. body.tag-news) */
-/* replace the number to the corresponding page number */
-/* custom page template page */
-/* individual page template (i.e. body.page-template-contact-php */
-/* replace the number to the corresponding page number */
-/* parent page template */
-/* child page template */
-/* replace the number to the corresponding page number */
-/* if user is logged in */
-/* paged items like search results or archives */
-/* individual paged (i.e. body.paged-3) */
-/*********************
-LAYOUT & GRID STYLES
-*********************/
-/* line 62, ../sass/breakpoints/_base.scss */
-.wrap {
-  display: flex;
-  height: 100%;
-  flex-direction: row;
-  margin: 0 auto;
-}
-
-/* line 1, ../sass/modules/_header.scss */
-header[role=banner] {
-  background-image: url(../../img/blurryWall.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  box-shadow: -3px 3px 6px #13140F;
-  align-items: left;
-  display: flex;
-  justify-content: left;
-  padding: 1rem;
-  position: relative;
-  text-align: left;
-}
-
-/* line 14, ../sass/modules/_header.scss */
-.header #logo {
-  font-family: "manu_negra_regular", serif;
-  font-size: 3.75em;
-  margin: 0.5em 0;
-  text-transform: uppercase;
-}
-/* line 20, ../sass/modules/_header.scss */
-.header #logo a {
-  color: #f7ffea;
-  text-decoration: none;
-}
-
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -1050,194 +757,6 @@ PAGE NAVI STYLES
 }
 
 /* end .wp-prev-next */
-/******************************************************************
-COMMENT STYLES
-******************************************************************/
-/* h3 comment title */
-/* line 7, ../sass/modules/_comments.scss */
-#comments-title {
-  padding: 1rem 0;
-  margin: 0;
-  /* number of comments span */
-}
-
-/* line 26, ../sass/modules/_comments.scss */
-.commentlist {
-  margin: 0;
-  list-style-type: none;
-}
-
-/* line 31, ../sass/modules/_comments.scss */
-.comment {
-  position: relative;
-  clear: both;
-  overflow: hidden;
-  padding: 1.5em;
-  border-bottom: 1px solid;
-  /* vcard */
-  /* end .commentlist .vcard */
-  /* end children */
-  /* general comment classes */
-}
-/* line 38, ../sass/modules/_comments.scss */
-.comment .comment-author {
-  padding: 7px;
-  border: 0;
-}
-/* line 44, ../sass/modules/_comments.scss */
-.comment .vcard {
-  margin-left: 50px;
-}
-/* line 47, ../sass/modules/_comments.scss */
-.comment .vcard cite.fn {
-  font-weight: 700;
-  font-style: normal;
-}
-/* line 55, ../sass/modules/_comments.scss */
-.comment .vcard time {
-  display: block;
-  font-size: 0.9em;
-  font-style: italic;
-}
-/* line 60, ../sass/modules/_comments.scss */
-.comment .vcard time a {
-  color: #68776C;
-  text-decoration: none;
-}
-/* line 64, ../sass/modules/_comments.scss */
-.comment .vcard time a:hover {
-  text-decoration: underline;
-}
-/* line 74, ../sass/modules/_comments.scss */
-.comment .vcard .avatar {
-  position: absolute;
-  left: 16px;
-  border-radius: 50%;
-}
-/* line 82, ../sass/modules/_comments.scss */
-.comment:last-child {
-  margin-bottom: 0;
-}
-/* line 86, ../sass/modules/_comments.scss */
-.comment .children {
-  margin: 0;
-  /* variations */
-  /* change number for different depth */
-}
-/* line 104, ../sass/modules/_comments.scss */
-.comment[class*=depth-] {
-  margin-top: 1.1em;
-}
-/* line 108, ../sass/modules/_comments.scss */
-.comment.depth-1 {
-  margin-left: 0;
-  margin-top: 0;
-}
-/* line 113, ../sass/modules/_comments.scss */
-.comment:not(.depth-1) {
-  margin-top: 0;
-  margin-left: 7px;
-  padding: 7px;
-}
-/* line 126, ../sass/modules/_comments.scss */
-.comment.odd {
-  background-color: #fff;
-}
-/* line 129, ../sass/modules/_comments.scss */
-.comment.even {
-  background: #f8f9fa;
-}
-
-/* comment meta */
-/* comment content */
-/* line 163, ../sass/modules/_comments.scss */
-.comment_content p {
-  margin: 0.7335em 0 1.5em;
-  font-size: 1em;
-  line-height: 1.5em;
-}
-
-/* end .commentlist .comment_content */
-/* comment reply link */
-/* line 172, ../sass/modules/_comments.scss */
-.comment-reply-link {
-  font-size: 0.9em;
-  float: right;
-}
-
-/* end .commentlist .comment-reply-link */
-/* edit comment link */
-/* line 184, ../sass/modules/_comments.scss */
-.comment-edit-link {
-  font-style: italic;
-  margin: 0 7px;
-  text-decoration: none;
-  font-size: 0.9em;
-}
-
-/******************************************************************
-COMMENT FORM STYLES
-******************************************************************/
-/* line 197, ../sass/modules/_comments.scss */
-.comment-respond {
-  padding: 1rem 0;
-}
-
-/* line 202, ../sass/modules/_comments.scss */
-#reply-title {
-  margin: 0;
-}
-
-/* line 206, ../sass/modules/_comments.scss */
-.logged-in-as {
-  color: #68776C;
-  font-style: italic;
-  margin: 0;
-}
-/* line 211, ../sass/modules/_comments.scss */
-.logged-in-as a {
-  color: #13140F;
-}
-
-/* line 216, ../sass/modules/_comments.scss */
-.comment-form-comment {
-  margin: 1.5em 0 0.75em;
-}
-
-/* line 220, ../sass/modules/_comments.scss */
-.form-allowed-tags {
-  padding: 1.5em;
-  background-color: #f8f9fa;
-  font-size: 0.9em;
-}
-
-/* comment submit button */
-/* line 227, ../sass/modules/_comments.scss */
-#submit {
-  float: right;
-  font-size: 1em;
-}
-
-/* comment form title */
-/* line 234, ../sass/modules/_comments.scss */
-#comment-form-title {
-  margin: 0 0 1.1em;
-}
-
-/* cancel comment reply link */
-/* logged in comments */
-/* allowed tags */
-/* line 247, ../sass/modules/_comments.scss */
-#allowed_tags {
-  margin: 1.5em 10px 0.7335em 0;
-}
-
-/* no comments */
-/* line 252, ../sass/modules/_comments.scss */
-.nocomments {
-  margin: 0 20px 1.1em;
-}
-
 /*********************
 SIDEBARS & ASIDES
 *********************/
@@ -1304,9 +823,394 @@ view.
   height: 100%;
 }
 
+/* line 20, ../sass/modules/_media.scss */
+.gallery .gallery-item {
+  display: inline-block;
+  margin-right: 0.5em;
+  width: auto;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* line 23, ../sass/breakpoints/_base.scss */
+.wrap {
+  height: 100%;
+  margin: 0 auto;
+}
+/* line 27, ../sass/breakpoints/_base.scss */
+.wrap:after {
+  clear: both;
+  content: '';
+}
+
+/* line 32, ../sass/breakpoints/_base.scss */
+section, .flexgroup {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: nowrap;
+}
+
+/*********************
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*********************/
+@media only screen and (min-width: 481px) {
+  /* line 46, ../sass/breakpoints/_base.scss */
+  .entry-content {
+    /* at this larger size, we can start to align images */
+  }
+  /* line 48, ../sass/breakpoints/_base.scss */
+  .entry-content .alignleft, .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  /* line 53, ../sass/breakpoints/_base.scss */
+  .entry-content .alignright, .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  /* line 58, ../sass/breakpoints/_base.scss */
+  .entry-content .aligncenter, .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+}
+/*********************
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 768px) {
+  /* line 75, ../sass/breakpoints/_base.scss */
+  .wrap {
+    width: 760px;
+  }
+}
+/*********************
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 1030px) {
+  /* line 87, ../sass/breakpoints/_base.scss */
+  .wrap {
+    width: 1040px;
+  }
+}
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*********************/
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+@media print {
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Print Stylesheet
+  
+  This is the print stylesheet. There's probably not a lot
+  of reasons to edit this stylesheet. If you want to
+  though, go for it.
+  
+  ******************************************************************/
+  /* line 13, ../sass/_print.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* line 21, ../sass/_print.scss */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  /* line 26, ../sass/_print.scss */
+  a:after, a:visited:after {
+    content: " (" attr(href) ")";
+  }
+  /* line 31, ../sass/_print.scss */
+  a abbr[title]:after, a:visited abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 36, ../sass/_print.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 42, ../sass/_print.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 47, ../sass/_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 51, ../sass/_print.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  /* line 55, ../sass/_print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  /* line 63, ../sass/_print.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 68, ../sass/_print.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 74, ../sass/_print.scss */
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none;
+  }
+}
+@font-face {
+  font-family: "robotomedium";
+  src: url('../../fonts/roboto-medium-webfont.eot?1415696608') format('embedded-opentype'), url('../../fonts/roboto-medium-webfont.eot?&1415696608#iefix') format('embedded-opentype'), url('../../fonts/roboto-medium-webfont.woff2?1415696608') format('woff2'), url('../../fonts/roboto-medium-webfont.woff?1415696608') format('woff'), url('../../fonts/roboto-medium-webfont.ttf?1415696608') format('truetype'), url('../../fonts/roboto-medium-webfont.svg?1415696608#robotomedium') format('svg');
+}
+@font-face {
+  font-family: "robotobold";
+  src: url('../../fonts/roboto-bold-webfont.eot?1415739198') format('embedded-opentype'), url('../../fonts/roboto-bold-webfont.eot?&1415739198#iefix') format('embedded-opentype'), url('../../fonts/roboto-bold-webfont.woff2?1415739198') format('woff2'), url('../../fonts/roboto-bold-webfont.woff?1415739198') format('woff'), url('../../fonts/roboto-bold-webfont.ttf?1415739198') format('truetype'), url('../../fonts/roboto-bold-webfont.svg?1415739198#robotobold') format('svg');
+}
+@font-face {
+  font-family: "robotomediummedium_italic";
+  src: url('../../fonts/roboto-mediumitalic-webfont.eot?1415696608') format('embedded-opentype'), url('../../fonts/roboto-mediumitalic-webfont.eot?&1415696608#iefix') format('embedded-opentype'), url('../../fonts/roboto-mediumitalic-webfont.woff2?1415696608') format('woff2'), url('../../fonts/roboto-mediumitalic-webfont.woff?1415696608') format('woff'), url('../../fonts/roboto-mediumitalic-webfont.ttf?1415696608') format('truetype'), url('../../fonts/roboto-mediumitalic-webfont.svg?1415696608#robotomedium_italic') format('svg');
+}
+@font-face {
+  font-family: "manu_negra_regular";
+  src: url('../../fonts/wcmanonegrabta-webfont.eot?1415710958') format('embedded-opentype'), url('../../fonts/wcmanonegrabta-webfont.eot?&1415710958#iefix') format('embedded-opentype'), url('../../fonts/wcmanonegrabta-webfont.woff2?1415710958') format('woff2'), url('../../fonts/wcmanonegrabta-webfont.woff?1415710958') format('woff'), url('../../fonts/wcmanonegrabta-webfont.ttf?1415710958') format('truetype'), url('../../fonts/wcmanonegrabta-webfont.svg?1415710958#wc_mano_negra_btaregular') format('svg');
+}
+@font-face {
+  font-family: "icomoon";
+  src: url('../../fonts/icomoon.eot?-xsbv7j&1415784292') format('embedded-opentype'), url('../../fonts/icomoon.eot?&1415784292#iefix-xsbv7j') format('embedded-opentype'), url('../../fonts/icomoon.woff?-xsbv7j&1415784292') format('woff'), url('../../fonts/icomoon.ttf?-xsbv7j&1415784292') format('truetype'), url('../../fonts/icomoon.svg?-xsbv7j&1415784292#icomoon') format('svg');
+}
+/* line 12, ../sass/utils/_webfonts.sass */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 23, ../sass/utils/_webfonts.sass */
+.icon-newtab:before {
+  content: "";
+}
+
+/* line 9, ../sass/_typography.sass */
+html {
+  font-family: "robotomedium", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 15, ../sass/_typography.sass */
+h1, .h1, h2, .h2, .instagram-feed figure figcaption, h3, .h3, .hero-article-list.widget a, h4, .h4, h5, .h5 {
+  font-weight: 500;
+  font-family: "robotomedium", Helvetica, sans-serif;
+  text-rendering: optimizelegibility;
+}
+
+/* line 20, ../sass/_typography.sass */
+h1 {
+  margin-top: 0;
+}
+
+/* line 23, ../sass/_typography.sass */
+h1, .h1 {
+  font-size: 2.5em;
+  line-height: 1.333em;
+}
+
+/* line 27, ../sass/_typography.sass */
+h2, .h2, .instagram-feed figure figcaption {
+  font-size: 1.75em;
+  line-height: 1.4em;
+  margin-bottom: 0.375em;
+}
+
+/* line 32, ../sass/_typography.sass */
+h3, .h3, .hero-article-list.widget a {
+  font-size: 1.25em;
+}
+
+/* line 35, ../sass/_typography.sass */
+h4, .h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+/* line 39, ../sass/_typography.sass */
+h5, .h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* line 45, ../sass/_typography.sass */
+strong {
+  font-family: "robotobold", Helvetica, sans-serif;
+}
+
+/* line 48, ../sass/_typography.sass */
+em, blockquote, .italic {
+  font-style: normal;
+  font-family: "robotomediummedium_italic", Helvetica, sans-serif;
+}
+
+/* line 53, ../sass/_typography.sass */
+.offsite-link a {
+  text-decoration: none;
+}
+/* line 56, ../sass/_typography.sass */
+.offsite-link a .inline-link {
+  display: inline-block;
+  text-decoration: underline;
+}
+/* line 60, ../sass/_typography.sass */
+.offsite-link a .icon-newtab:before {
+  font-size: 0.8em;
+  margin-left: 0.25em;
+}
+
+/* line 64, ../sass/_typography.sass */
+.more-link {
+  text-decoration: none;
+}
+/* line 67, ../sass/_typography.sass */
+.more-link.button {
+  padding: 0 1em;
+}
+/* line 70, ../sass/_typography.sass */
+.more-link:after {
+  content: "→";
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/* line 1, ../sass/_layout.scss */
+body {
+  background-image: url(../../img/sprinkles.png);
+  background-repeat: repeat;
+}
+
+/* line 5, ../sass/_layout.scss */
+section {
+  width: 100%;
+}
+/* line 9, ../sass/_layout.scss */
+section.alt {
+  margin: 0;
+}
+/* line 13, ../sass/_layout.scss */
+section .vert-align {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 20, ../sass/_layout.scss */
+.article-header .byline, .article-header .entry-title {
+  margin-bottom: 0.25em;
+}
+
+/* line 24, ../sass/_layout.scss */
+iframe, object {
+  width: 100%;
+}
+
 /* line 11, ../sass/_grids.scss */
 .primary {
-  width: 65%;
+  width: 60%;
   float: left;
   margin-right: 1.69492%;
 }
@@ -1319,28 +1223,59 @@ view.
   margin-left: 5%;
 }
 
-@media (max-width: 640px) {
-  /* line 20, ../sass/_grids.scss */
+/* line 19, ../sass/_grids.scss */
+.grid-section {
+  width: 30%;
+  float: left;
+  margin-right: 1.69492%;
+}
+
+/* line 22, ../sass/_grids.scss */
+.about-text-col {
+  margin-right: 5%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 26, ../sass/_grids.scss */
   .wrap {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* line 32, ../sass/_grids.scss */
+  .grid-section {
+    width: 45%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+@media (max-width: 768px) {
+  /* line 37, ../sass/_grids.scss */
+  .wrap, .global-wrap {
     display: block;
   }
 
-  /* line 23, ../sass/_grids.scss */
+  /* line 40, ../sass/_grids.scss */
   .primary {
-    width: 100%;
-    float: left;
-    margin-right: 1.69492%;
     float: none;
+    margin: 0 1rem;
+    width: auto;
   }
 
-  /* line 27, ../sass/_grids.scss */
+  /* line 45, ../sass/_grids.scss */
   .secondary {
-    width: 100%;
-    float: left;
-    margin-right: 1.69492%;
     float: none;
-    margin-left: 0;
+    margin: 0 1rem;
     padding-top: 3rem;
+    width: auto;
+  }
+
+  /* line 52, ../sass/_grids.scss */
+  .grid-section {
+    float: none;
+    margin: 0;
+    width: auto;
   }
 }
 /*********************
@@ -1350,6 +1285,64 @@ We can break them up as much as we want or just keep them all in one.
 I mean, you can do whatever you want. The world is your oyster. Unless
 you hate oysters, then the world is your peanut butter & jelly sandwich.
 *********************/
+/* line 1, ../sass/modules/_header.scss */
+header[role=banner] {
+  background-image: url(../../img/blurryWall.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: -3px 3px 6px #13140F;
+  padding: 1em;
+  position: relative;
+  text-align: left;
+}
+
+/* line 12, ../sass/modules/_header.scss */
+.home header[role=banner] {
+  padding: 1rem 1rem 3rem;
+}
+/* line 16, ../sass/modules/_header.scss */
+.home a.site-logo .site-logo-type {
+  font-size: 3rem;
+}
+/* line 19, ../sass/modules/_header.scss */
+.home a.site-logo .site-tagline {
+  display: block;
+}
+
+/* line 24, ../sass/modules/_header.scss */
+a.site-logo {
+  text-shadow: 2px 2px 2px #13140F;
+  text-decoration: none;
+}
+/* line 28, ../sass/modules/_header.scss */
+a.site-logo .site-logo-type {
+  color: #f7ffea;
+  text-decoration: none;
+  font-family: "manu_negra_regular", serif;
+  font-size: 3rem;
+  line-height: 0.75;
+  margin: 0.5em 0 0;
+  text-transform: uppercase;
+}
+/* line 38, ../sass/modules/_header.scss */
+a.site-logo .site-tagline {
+  color: #abb29f;
+  font-family: "manu_negra_regular", serif;
+  font-size: 2.35rem;
+  margin: 0;
+  display: none;
+}
+@media (max-width: 768px) {
+  /* line 47, ../sass/modules/_header.scss */
+  a.site-logo .site-logo-type {
+    font-size: 3rem;
+  }
+  /* line 50, ../sass/modules/_header.scss */
+  a.site-logo .site-tagline {
+    font-size: 2rem;
+  }
+}
+
 /******************************************************************
 Site Name:
 Author:
@@ -1392,7 +1385,7 @@ you can just remove this stylesheet.
 }
 
 /* line 1, ../sass/modules/_buttons.scss */
-.btn, .comment-reply-link, #submit {
+.btn {
   display: inline-block;
   position: relative;
   text-decoration: none;
@@ -1409,12 +1402,12 @@ you can just remove this stylesheet.
   transition: background-color 0.14s ease-in-out;
 }
 /* line 17, ../sass/modules/_buttons.scss */
-.btn:hover, .comment-reply-link:hover, #submit:hover, .btn:focus, .comment-reply-link:focus, #submit:focus {
+.btn:hover, .btn:focus {
   color: #fff;
   text-decoration: none;
 }
 /* line 23, ../sass/modules/_buttons.scss */
-.btn:active, .comment-reply-link:active, #submit:active {
+.btn:active {
   top: 1px;
 }
 
@@ -1424,15 +1417,15 @@ You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
 /* line 34, ../sass/modules/_buttons.scss */
-.btn, .comment-reply-link, #submit {
+.btn {
   background-color: #2574a8;
 }
 /* line 38, ../sass/modules/_buttons.scss */
-.btn:hover, .comment-reply-link:hover, #submit:hover, .btn:focus, .comment-reply-link:focus, #submit:focus {
+.btn:hover, .btn:focus {
   background-color: #13140F;
 }
 /* line 43, ../sass/modules/_buttons.scss */
-.btn:active, .comment-reply-link:active, #submit:active {
+.btn:active {
   background-color: #2472a4;
 }
 
@@ -1741,94 +1734,95 @@ select {
 }
 
 /* line 2, ../sass/modules/_lists.scss */
-.hero-article-list .article-title {
-  margin-bottom: 1.75em;
+.hero-article-list li {
+  margin-bottom: 1.5em;
 }
 
-/* line 7, ../sass/modules/_lists.scss */
+/* line 12, ../sass/modules/_lists.scss */
 .recent-things .recent-description {
   margin: 0;
 }
-/* line 10, ../sass/modules/_lists.scss */
+/* line 15, ../sass/modules/_lists.scss */
 .recent-things:nth-of-type(1) ul {
   margin-bottom: 4em;
 }
-/* line 13, ../sass/modules/_lists.scss */
+/* line 18, ../sass/modules/_lists.scss */
 .recent-things li {
   display: block;
   margin-bottom: 1rem;
 }
-/* line 17, ../sass/modules/_lists.scss */
+/* line 22, ../sass/modules/_lists.scss */
 .recent-things li .recent-thing-title,
 .recent-things li .recent-thing-date {
   margin: 0;
 }
-/* line 22, ../sass/modules/_lists.scss */
+/* line 27, ../sass/modules/_lists.scss */
 .recent-things li a {
   color: #9fbf00;
 }
-/* line 26, ../sass/modules/_lists.scss */
+/* line 31, ../sass/modules/_lists.scss */
 .recent-things li a:hover, .recent-things li a:focus {
   color: #00a0a5;
 }
-@media (max-width: 640px) {
-  /* line 6, ../sass/modules/_lists.scss */
+@media (max-width: 768px) {
+  /* line 11, ../sass/modules/_lists.scss */
   .recent-things {
     padding: 2rem 1rem 0;
   }
 }
 
-/* line 35, ../sass/modules/_lists.scss */
+/* line 40, ../sass/modules/_lists.scss */
 .author-bio {
   margin-top: 5em;
   text-align: center;
 }
-/* line 39, ../sass/modules/_lists.scss */
+/* line 44, ../sass/modules/_lists.scss */
 .author-bio img {
   border-radius: 50%;
   margin-right: 2em;
 }
-/* line 43, ../sass/modules/_lists.scss */
+/* line 48, ../sass/modules/_lists.scss */
 .author-bio .author-bio-text {
   text-align: left;
 }
-@media (max-width: 640px) {
-  /* line 35, ../sass/modules/_lists.scss */
+@media (max-width: 768px) {
+  /* line 40, ../sass/modules/_lists.scss */
   .author-bio {
     margin-top: 0;
   }
-  /* line 50, ../sass/modules/_lists.scss */
+  /* line 55, ../sass/modules/_lists.scss */
   .author-bio .author-bio-text {
     padding: 0 1rem;
   }
 }
 
-/* line 55, ../sass/modules/_lists.scss */
+/* line 60, ../sass/modules/_lists.scss */
 .instagram-feed {
   padding-bottom: 4rem;
+  text-align: center;
 }
-/* line 59, ../sass/modules/_lists.scss */
+/* line 65, ../sass/modules/_lists.scss */
 .instagram-feed h2 {
   margin-bottom: 1em;
 }
-/* line 62, ../sass/modules/_lists.scss */
+/* line 68, ../sass/modules/_lists.scss */
 .instagram-feed .widget {
   text-align: center;
   width: 100%;
 }
-/* line 66, ../sass/modules/_lists.scss */
-.instagram-feed .widget figure {
+/* line 72, ../sass/modules/_lists.scss */
+.instagram-feed figure {
   display: inline-block;
   margin: 0.5em;
   position: relative;
   overflow: hidden;
 }
-/* line 72, ../sass/modules/_lists.scss */
-.instagram-feed .widget figure img {
+/* line 78, ../sass/modules/_lists.scss */
+.instagram-feed figure img {
   margin: 0;
 }
-/* line 75, ../sass/modules/_lists.scss */
-.instagram-feed .widget figure figcaption {
+/* line 81, ../sass/modules/_lists.scss */
+.instagram-feed figure figcaption {
   background-color: rgba(19, 20, 15, 0.85);
   color: #F5FFE4;
   margin: 0;
@@ -1844,20 +1838,20 @@ select {
   align-items: center;
   justify-content: center;
 }
-/* line 92, ../sass/modules/_lists.scss */
-.instagram-feed .widget figure figcaption span {
+/* line 98, ../sass/modules/_lists.scss */
+.instagram-feed figure figcaption span {
   padding: 1em;
 }
-/* line 96, ../sass/modules/_lists.scss */
-.instagram-feed .widget figure a {
+/* line 102, ../sass/modules/_lists.scss */
+.instagram-feed figure a {
   display: block;
   text-decoration: none;
 }
-/* line 102, ../sass/modules/_lists.scss */
-.instagram-feed .widget figure a:hover figcaption, .instagram-feed .widget figure a:focus figcaption {
+/* line 108, ../sass/modules/_lists.scss */
+.instagram-feed figure a:hover figcaption, .instagram-feed figure a:focus figcaption {
   opacity: 1;
 }
-/* line 109, ../sass/modules/_lists.scss */
+/* line 114, ../sass/modules/_lists.scss */
 .instagram-feed:after {
   content: '';
   clear: both;
@@ -1873,15 +1867,11 @@ select {
 .hero .hero-excerpt {
   margin-bottom: 1.5em;
 }
-/* line 7, ../sass/modules/_hero.scss */
-.hero .hero-links {
-  margin: 0 1rem;
-}
-/* line 10, ../sass/modules/_hero.scss */
+/* line 8, ../sass/modules/_hero.scss */
 .hero .hero-links h2, .hero .hero-links h3 {
   margin: 0;
 }
-/* line 13, ../sass/modules/_hero.scss */
+/* line 11, ../sass/modules/_hero.scss */
 .hero .hero-links .more-link {
   font-size: 0.9em;
   float: none;
@@ -1889,7 +1879,7 @@ select {
   margin-top: 1.5em;
 }
 @media (min-width: 1024px) {
-  /* line 23, ../sass/modules/_hero.scss */
+  /* line 21, ../sass/modules/_hero.scss */
   .hero .hero-links .more-link {
     display: block;
     float: right;
@@ -1898,449 +1888,113 @@ select {
 }
 
 /*********************
-LARGER MOBILE DEVICES
-This is for devices like the Galaxy Note or something that's
-larger than an iPhone but smaller than a tablet. Let's call them
-tweeners.
+POSTS & CONTENT STYLES
 *********************/
-@media only screen and (min-width: 481px) {
-  /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: 481px and Up Stylesheet
-  
-  This stylesheet is loaded for larger devices. It's set to
-  481px because at 480px it would load on a landscaped iPhone.
-  This isn't ideal because then you would be loading all those
-  extra styles on that same mobile connection.
-  
-  A word of warning. This size COULD be a larger mobile device,
-  so you still want to keep it pretty light and simply expand
-  upon your base.scss styles.
-  
-  ******************************************************************/
-  /*
-  IMPORTANT NOTE ABOUT SASS 3.3 & UP
-  You can't use @extend within media queries
-  anymore, so just be aware that if you drop
-  them in here, they won't work.
-  */
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  /* .menu is clearfixed inside mixins.scss */
-  /* line 33, ../sass/breakpoints/_481up.scss */
-  .menu {
-    /* end .menu ul */
-  }
-  /* line 34, ../sass/breakpoints/_481up.scss */
-  .menu ul {
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */
-  }
-  /* line 35, ../sass/breakpoints/_481up.scss */
-  .menu ul li {
-    /*
-    plan your menus and drop-downs wisely.
-    */
-  }
-  /* line 36, ../sass/breakpoints/_481up.scss */
-  .menu ul li a {
-    /*
-    you can use hover styles here even though this size
-    has the possibility of being a mobile device.
-    */
-  }
-
-  /* end .menu */
-  /*********************
-  POSTS & CONTENT STYLES
-  *********************/
-  /* entry content */
-  /* line 81, ../sass/breakpoints/_481up.scss */
-  .entry-content {
-    /* at this larger size, we can start to align images */
-  }
-  /* line 85, ../sass/breakpoints/_481up.scss */
-  .entry-content .alignleft, .entry-content img.alignleft {
-    margin-right: 1.5em;
-    display: inline;
-    float: left;
-  }
-  /* line 90, ../sass/breakpoints/_481up.scss */
-  .entry-content .alignright, .entry-content img.alignright {
-    margin-left: 1.5em;
-    display: inline;
-    float: right;
-  }
-  /* line 95, ../sass/breakpoints/_481up.scss */
-  .entry-content .aligncenter, .entry-content img.aligncenter {
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    clear: both;
-  }
-
-  /* end .entry-content */
-  /*********************
-  FOOTER STYLES
-  *********************/
-  /*
-  check your menus here. do they look good?
-  do they need tweaking?
-  */
-  /* end .footer-links */
+/* line 5, ../sass/modules/_posts.scss */
+.entry-content {
+  padding-bottom: 2rem;
 }
-/*********************
-TABLET & SMALLER LAPTOPS
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*********************/
-@media only screen and (min-width: 768px) {
-  /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: Tablet & Small Desktop Stylesheet
-  
-  Here's where you can start getting into the good stuff.
-  This size will work on iPads, other tablets, and desktops.
-  So you can start working with more styles, background images,
-  and other resources. You'll also notice the grid starts to
-  come into play. Have fun!
-  
-  ******************************************************************/
-  /*********************
-  GENERAL STYLES
-  *********************/
-  /*********************
-  LAYOUT & GRID STYLES
-  *********************/
-  /* line 26, ../sass/breakpoints/_768up.scss */
-  .wrap {
-    width: 760px;
-  }
-
-  /*********************
-  HEADER STYLES
-  *********************/
-  /*********************
-  NAVIGATION STYLES
-  *********************/
-  /* line 42, ../sass/breakpoints/_768up.scss */
-  .nav {
-    border: 0;
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */
-  }
-  /* line 44, ../sass/breakpoints/_768up.scss */
-  .nav ul {
-    background: #323944;
-    margin-top: 0;
-  }
-  /* line 48, ../sass/breakpoints/_768up.scss */
-  .nav li {
-    float: left;
-    position: relative;
-    /*
-    plan your menus and drop-downs wisely.
-    */
-    /* showing sub-menus */
-  }
-  /* line 52, ../sass/breakpoints/_768up.scss */
-  .nav li a {
-    border-bottom: 0;
-    /*
-    you can use hover styles here even though this size
-    has the possibility of being a mobile device.
-    */
-  }
-  /* line 59, ../sass/breakpoints/_768up.scss */
-  .nav li a:hover, .nav li a:focus {
-    color: #fff;
-    text-decoration: underline;
-  }
-  /* line 71, ../sass/breakpoints/_768up.scss */
-  .nav li ul.sub-menu,
-  .nav li ul.children {
-    margin-top: 0;
-    border: 1px solid #ccc;
-    border-top: 0;
-    position: absolute;
-    visibility: hidden;
-    z-index: 8999;
-    /* highlight sub-menu current page */
-  }
-  /* line 80, ../sass/breakpoints/_768up.scss */
-  .nav li ul.sub-menu li,
-  .nav li ul.children li {
-    /*
-    if you need to go deeper, go nuts
-    just remember deeper menus suck
-    for usability. k, bai.
-    */
-  }
-  /* line 82, ../sass/breakpoints/_768up.scss */
-  .nav li ul.sub-menu li a,
-  .nav li ul.children li a {
-    padding-left: 10px;
-    border-right: 0;
-    display: block;
-    width: 180px;
-    border-bottom: 1px solid #ccc;
-  }
-  /* line 99, ../sass/breakpoints/_768up.scss */
-  .nav li ul.sub-menu li:last-child a,
-  .nav li ul.children li:last-child a {
-    border-bottom: 0;
-  }
-  /* line 109, ../sass/breakpoints/_768up.scss */
-  .nav li ul.sub-menu li ul,
-  .nav li ul.children li ul {
-    top: 0;
-    left: 100%;
-  }
-  /* line 124, ../sass/breakpoints/_768up.scss */
-  .nav li:hover > ul {
-    top: auto;
-    visibility: visible;
-  }
-
-  /* end .nav */
-  /*********************
-  SIDEBARS & ASIDES
-  *********************/
-  /* line 148, ../sass/breakpoints/_768up.scss */
-  .widgettitle:not(.no-border) {
-    border-bottom: 2px solid #444;
-    margin-bottom: 0.75em;
-  }
-
-  /* line 153, ../sass/breakpoints/_768up.scss */
-  .widget {
-    padding: 0 10px;
-  }
-  /* line 158, ../sass/breakpoints/_768up.scss */
-  .widget ul li {
-    margin-bottom: 0.75em;
-    /* deep nesting */
-  }
-  /* line 166, ../sass/breakpoints/_768up.scss */
-  .widget ul li ul {
-    margin-top: 0.75em;
-    padding-left: 1em;
-  }
-
-  /* links widget */
-  /* meta widget */
-  /* pages widget */
-  /* recent-posts widget */
-  /* archives widget */
-  /* tag-cloud widget */
-  /* calendar widget */
-  /* category widget */
-  /* recent-comments widget */
-  /* search widget */
-  /* text widget */
-  /*********************
-  FOOTER STYLES
-  *********************/
-  /*
-  you'll probably need to do quite a bit
-  of overriding here if you styled them for
-  mobile. Make sure to double check these!
-  */
-  /* line 274, ../sass/breakpoints/_768up.scss */
-  .footer-links ul li {
-    /*
-    be careful with the depth of your menus.
-    it's very rare to have multi-depth menus in
-    the footer.
-    */
-  }
-
-  /* end .footer-links */
+/* line 8, ../sass/modules/_posts.scss */
+.entry-content table {
+  width: 100%;
+  border: 1px solid #eaedf2;
+  margin-bottom: 1.5em;
 }
-/*********************
-DESKTOP
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*********************/
-@media only screen and (min-width: 1030px) {
-  /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: Desktop Stylsheet
-  
-  This is the desktop size. It's larger than an iPad so it will only
-  be seen on the Desktop.
-  
-  ******************************************************************/
-  /* line 12, ../sass/breakpoints/_1030up.scss */
-  .wrap {
-    width: 1040px;
-  }
+/* line 13, ../sass/modules/_posts.scss */
+.entry-content table caption {
+  margin: 0 0 7px;
+  font-size: 0.75em;
+  color: #68776C;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-/*********************
-LARGE VIEWING SIZE
-This is for the larger monitors and possibly full screen viewers.
-*********************/
-@media only screen and (min-width: 1240px) {
-  /******************************************************************
-  Site Name: 
-  Author: 
-  
-  Stylesheet: Super Large Monitor Stylesheet
-  
-  You can add some advanced styles here if you like. This kicks in
-  on larger screens.
-  
-  ******************************************************************/
+/* line 22, ../sass/modules/_posts.scss */
+.entry-content tr {
+  border-bottom: 1px solid #eaedf2;
 }
-/*********************
-RETINA (2x RESOLUTION DEVICES)
-This applies to the retina iPhone (4s) and iPad (2,3) along with
-other displays with a 2x resolution. You can also create a media
-query for retina AND a certain size if you want. Go Nuts.
-*********************/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /******************************************************************
-  Site Name: 
-  Author: 
-  
-  Stylesheet: Retina Screens & Devices Stylesheet
-  
-  When handling retina screens you need to make adjustments, especially
-  if you're not using font icons. Here you can add them in one neat
-  place.
-  
-  ******************************************************************/
-  /* 
-  
-  EXAMPLE 
-  Let's say you have an image and you need to make sure it looks ok
-  on retina screens. Let's say we have an icon which dimension are
-  24px x 24px. In your regular stylesheets, it would look something
-  like this:
-  
-  .icon {
-  	width: 24px;
-  	height: 24px;
-  	background: url(img/test.png) no-repeat;
-  }
-  
-  For retina screens, we have to make some adjustments, so that image
-  doesn't look blurry. So, taking into account the image above and the
-  dimensions, this is what we would put in our retina stylesheet:
-  
-  .icon {
-  	background: url(img/test@2x.png) no-repeat;
-  	background-size: 24px 24px;
-  }
-  
-  So, you would create the same icon, but at double the resolution, meaning 
-  it would be 48px x 48px. You'd name it the same, but with a @2x at the end
-  (this is pretty standard practice). Set the background image so it matches
-  the original dimensions and you are good to go. 
-  
-  */
+/* line 25, ../sass/modules/_posts.scss */
+.entry-content tr:nth-child(even) {
+  background-color: #f8f9fa;
 }
-/*********************
-PRINT STYLESHEET
-Feel free to customize this. Remember to add things that won't make
-sense to print at the bottom. Things like nav, ads, and forms should
-be set to display none.
-*********************/
-@media print {
-  /******************************************************************
-  Site Name:
-  Author:
-  
-  Stylesheet: Print Stylesheet
-  
-  This is the print stylesheet. There's probably not a lot
-  of reasons to edit this stylesheet. If you want to
-  though, go for it.
-  
-  ******************************************************************/
-  /* line 13, ../sass/_print.scss */
-  * {
-    background: transparent !important;
-    color: black !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-
-  /* line 21, ../sass/_print.scss */
-  a, a:visited {
-    color: #444 !important;
-    text-decoration: underline;
-  }
-  /* line 26, ../sass/_print.scss */
-  a:after, a:visited:after {
-    content: " (" attr(href) ")";
-  }
-  /* line 31, ../sass/_print.scss */
-  a abbr[title]:after, a:visited abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /* line 36, ../sass/_print.scss */
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
-
-  /* line 42, ../sass/_print.scss */
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /* line 47, ../sass/_print.scss */
-  thead {
-    display: table-header-group;
-  }
-
-  /* line 51, ../sass/_print.scss */
-  tr, img {
-    page-break-inside: avoid;
-  }
-
-  /* line 55, ../sass/_print.scss */
-  img {
-    max-width: 100% !important;
-  }
-
-  @page {
-    margin: 0.5cm;
-  }
-  /* line 63, ../sass/_print.scss */
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  /* line 68, ../sass/_print.scss */
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-
-  /* line 74, ../sass/_print.scss */
-  .sidebar,
-  .page-navigation,
-  .wp-prev-next,
-  .respond-form,
-  nav {
-    display: none;
-  }
+/* line 30, ../sass/modules/_posts.scss */
+.entry-content td {
+  padding: 7px;
+  border-right: 1px solid #eaedf2;
 }
+/* line 34, ../sass/modules/_posts.scss */
+.entry-content td:last-child {
+  border-right: 0;
+}
+/* line 39, ../sass/modules/_posts.scss */
+.entry-content th {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eaedf2;
+  border-right: 1px solid #eaedf2;
+}
+/* line 44, ../sass/modules/_posts.scss */
+.entry-content th:last-child {
+  border-right: 0;
+}
+/* line 60, ../sass/modules/_posts.scss */
+.entry-content ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+/* line 69, ../sass/modules/_posts.scss */
+.entry-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em;
+}
+/* line 76, ../sass/modules/_posts.scss */
+.entry-content img {
+  box-shadow: 1px 1px 3px #333;
+  max-width: 100%;
+  height: auto;
+}
+/* line 81, ../sass/modules/_posts.scss */
+.entry-content img.no-shadow {
+  box-shadow: none;
+}
+/* line 86, ../sass/modules/_posts.scss */
+.entry-content .size-auto,
+.entry-content .size-full,
+.entry-content .size-large,
+.entry-content .size-medium,
+.entry-content .size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+/* line 95, ../sass/modules/_posts.scss */
+.entry-content pre {
+  background: #323944;
+  color: #f8f9fa;
+  font-size: 0.9em;
+  padding: 1.5em;
+  margin: 0 0 1.5em;
+  border-radius: 3px;
+}
+
+/* end .entry-content */
+/* line 106, ../sass/modules/_posts.scss */
+.wp-caption {
+  max-width: 100%;
+  background: #eee;
+  padding: 5px;
+  /* images inside wp-caption */
+}
+/* line 112, ../sass/modules/_posts.scss */
+.wp-caption img {
+  max-width: 100%;
+  margin-bottom: 0;
+  width: 100%;
+}
+/* line 118, ../sass/modules/_posts.scss */
+.wp-caption p.wp-caption-text {
+  font-size: 0.85em;
+  margin: 4px 0 7px;
+  text-align: center;
+}
+
+/* end .wp-caption */

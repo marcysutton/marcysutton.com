@@ -2,22 +2,8 @@ body {
 	background-image: url(../../img/sprinkles.png);
 	background-repeat: repeat;
 }
-
-main {
-	align-items: top;
-	display: flex;
-	flex: 1;
-	flex-wrap: wrap;
-	justify-content: center;
-	overflow: auto;
-	position: relative;
-}
-
-section .wrap, .wrap {
-	flex-direction: row;
-}
 section {
-	margin: 0 $default_padding;
+	// margin: 0 $default_padding;
 	width: 100%;
 
 	&.alt {
@@ -30,6 +16,11 @@ section {
 	}
 }
 
+.article-header {
+	.byline, .entry-title {
+		margin-bottom: 0.25em;
+	}
+}
 iframe, object {
 	width: 100%;
 }

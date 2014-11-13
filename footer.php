@@ -16,9 +16,8 @@
         			'depth' => 0,                                   // limit the depth of the nav
     					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 						)); ?>
-					</nav>
-
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>. <a href="http://twitter.com/marcysutton">Contact me on Twitter!</a></p>
+					</nav> 
+					<p class="source-org copyright">&copy; 2003-<?php echo date('Y'); ?> Marcy Sutton. <a href="http://twitter.com/marcysutton">@MarcySutton on Twitter</a> • <a href="/about">About</a></p>
 				</div>
 
 			</footer>

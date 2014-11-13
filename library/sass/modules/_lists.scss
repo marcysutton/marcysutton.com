@@ -1,6 +1,11 @@
 .hero-article-list {
-	.article-title {
-		margin-bottom: 1.75em;
+	li {
+		margin-bottom: 1.5em;
+	}
+	&.widget {
+		a {
+			@extend .h3;
+		}
 	}
 }
 .recent-things {
@@ -55,6 +60,7 @@
 .instagram-feed {
 	@extend .padded-top;
 	padding-bottom: $default_padding*4;
+	text-align: center;
 	
 	h2 {
 		margin-bottom: 1em;
@@ -62,46 +68,45 @@
 	.widget {
 		text-align: center;
 		width: 100%;
+	}
+	figure {
+		display: inline-block;
+		margin: 0.5em;
+		position: relative;
+		overflow: hidden;
 		
-		figure {
-			display: inline-block;
-			margin: 0.5em;
-			position: relative;
-			overflow: hidden;
-			
-			img {
-				margin: 0;
+		img {
+			margin: 0;
+		}
+		figcaption {
+			@extend .h2;
+			background-color: rgba($foreground_color, 0.85);
+			color: $background_color;
+			margin: 0;
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			max-height: 306px;
+			transition: 0.5s;
+			display: flex;
+		  align-items: center;
+		  justify-content: center;
+
+			span {
+				padding: 1em;
 			}
-			figcaption {
-				@extend .h2;
-				background-color: rgba($foreground_color, 0.85);
-				color: $background_color;
-				margin: 0;
-				position: absolute;
-				opacity: 0;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				max-height: 306px;
-				transition: 0.5s;
-				display: flex;
-			  align-items: center;
-			  justify-content: center;
+		}
+		a {
+			display: block;
+			text-decoration: none;
 
-				span {
-					padding: 1em;
-				}
-			}
-			a {
-				display: block;
-				text-decoration: none;
+			&:hover, &:focus {
 
-				&:hover, &:focus {
-
-					figcaption {
-						opacity: 1;
-					}
+				figcaption {
+					opacity: 1;
 				}
 			}
 		}

@@ -2,10 +2,12 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+				<div id="inner-content" class="cf">
 
 					<main>
-
+						<section class="wrap">
+							<div class="wrap padded-top">
+						
 						<article id="post-not-found" class="hentry primary">
 
 							<header class="article-header">
@@ -33,7 +35,8 @@
 							</footer>
 
 						</article>
-
+						</div>
+					</section>
 					</main>
 
 				</div>

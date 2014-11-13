@@ -5,7 +5,8 @@
 				<div id="inner-content" class="cf">
 
 					<main>
-						<div class="wrap padded-top">
+						<section class="wrap">
+							<div class="wrap padded-top">
 						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -17,7 +18,7 @@
 									<h3 class="search-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
                   <p class="byline vcard">
-                    <?php printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
+                    <?php printf( __( '<time class="updated" datetime="%1$s" pubdate>%2$s</time>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')) )); ?>
                   </p>
 
 								</header>
@@ -61,6 +62,7 @@
 
 							<?php get_sidebar(); ?>
 							</div>
+							</section>
 						</main>
 
 					</div>
