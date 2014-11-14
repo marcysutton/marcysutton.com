@@ -526,66 +526,71 @@ span.amp {
 
 /* line 3, ../sass/_color.sass */
 html, body {
-  background-color: #F5FFE4;
   color: #13140F;
 }
+@media (max-width: 768px) {
+  /* line 3, ../sass/_color.sass */
+  html, body {
+    background-color: #333;
+  }
+}
 
-/* line 7, ../sass/_color.sass */
+/* line 9, ../sass/_color.sass */
 a, button {
   transition: 0.5s;
 }
 
-/* line 10, ../sass/_color.sass */
+/* line 12, ../sass/_color.sass */
 a {
   color: #13140F;
 }
-/* line 13, ../sass/_color.sass */
+/* line 15, ../sass/_color.sass */
 a:focus, a:hover {
   color: #00a0a5;
 }
-/* line 16, ../sass/_color.sass */
+/* line 18, ../sass/_color.sass */
 a:link {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
 }
 
-/* line 20, ../sass/_color.sass */
+/* line 22, ../sass/_color.sass */
 .offsite-link .icon-newtab:before {
   color: #abb29f;
 }
 
-/* line 24, ../sass/_color.sass */
+/* line 26, ../sass/_color.sass */
 .alt .more-link {
   color: #abb29f;
 }
 
-/* line 27, ../sass/_color.sass */
+/* line 29, ../sass/_color.sass */
 .more-link.button {
   background-color: #9fbf00;
   box-shadow: 1px 1px 2px #898987;
 }
-/* line 31, ../sass/_color.sass */
+/* line 33, ../sass/_color.sass */
 .more-link.button:hover, .more-link.button:focus {
   background-color: #00a0a5;
   color: #F5FFE4;
 }
 
-/* line 35, ../sass/_color.sass */
+/* line 37, ../sass/_color.sass */
 .byline {
   color: #71726f;
 }
 
-/* line 38, ../sass/_color.sass */
+/* line 40, ../sass/_color.sass */
 button {
   border: 1px solid;
 }
-/* line 41, ../sass/_color.sass */
+/* line 43, ../sass/_color.sass */
 button:focus, button:hover {
   border-color: #13140F;
   background-color: #13140F;
   color: #F5FFE4;
 }
 
-/* line 46, ../sass/_color.sass */
+/* line 48, ../sass/_color.sass */
 .alt {
   background-color: #333;
   color: #F5FFE4;
@@ -621,8 +626,14 @@ button:focus, button:hover {
 }
 
 /* line 12, ../sass/utils/_utils.scss */
-.padded-top, section.alt, .instagram-feed {
+.padded-top, section.alt {
   padding: 3rem 0;
+}
+
+/* line 15, ../sass/utils/_utils.scss */
+.clear {
+  clear: both;
+  display: block;
 }
 
 /******************************************************************
@@ -780,17 +791,25 @@ FOOTER STYLES
 *********************/
 /* line 5, ../sass/modules/_footer.scss */
 .footer {
+  font-size: 0.95em;
+  padding: 1rem 0;
   clear: both;
   background-color: #323944;
   color: #f8f9fa;
 }
-/* line 11, ../sass/modules/_footer.scss */
+/* line 12, ../sass/modules/_footer.scss */
 .footer a {
   color: #9fbf00;
 }
-/* line 14, ../sass/modules/_footer.scss */
+/* line 15, ../sass/modules/_footer.scss */
 .footer a:hover, .footer a:focus {
   color: #00a0a5;
+}
+@media (max-width: 768px) {
+  /* line 20, ../sass/modules/_footer.scss */
+  .footer a {
+    display: block;
+  }
 }
 
 /*
@@ -804,7 +823,7 @@ view.
 */
 /* end .footer-links */
 /* line 1, ../sass/modules/_media.scss */
-.video-responsive {
+.responsive-video {
   position: relative;
   padding-bottom: 75%;
   height: 0;
@@ -812,10 +831,10 @@ view.
 }
 
 /* line 8, ../sass/modules/_media.scss */
-.video-responsive iframe,
-.video-responsive object,
-.video-responsive embed,
-.video-responsive video {
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed,
+.responsive-video video {
   position: absolute;
   top: 0;
   left: 0;
@@ -853,6 +872,11 @@ section, .flexgroup {
   flex-wrap: nowrap;
 }
 
+/* line 39, ../sass/breakpoints/_base.scss */
+section.noflex {
+  display: block;
+}
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -860,23 +884,23 @@ larger than an iPhone but smaller than a tablet. Let's call them
 tweeners.
 *********************/
 @media only screen and (min-width: 481px) {
-  /* line 46, ../sass/breakpoints/_base.scss */
+  /* line 49, ../sass/breakpoints/_base.scss */
   .entry-content {
     /* at this larger size, we can start to align images */
   }
-  /* line 48, ../sass/breakpoints/_base.scss */
+  /* line 51, ../sass/breakpoints/_base.scss */
   .entry-content .alignleft, .entry-content img.alignleft {
     margin-right: 1.5em;
     display: inline;
     float: left;
   }
-  /* line 53, ../sass/breakpoints/_base.scss */
+  /* line 56, ../sass/breakpoints/_base.scss */
   .entry-content .alignright, .entry-content img.alignright {
     margin-left: 1.5em;
     display: inline;
     float: right;
   }
-  /* line 58, ../sass/breakpoints/_base.scss */
+  /* line 61, ../sass/breakpoints/_base.scss */
   .entry-content .aligncenter, .entry-content img.aligncenter {
     margin-right: auto;
     margin-left: auto;
@@ -891,7 +915,7 @@ in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 *********************/
 @media only screen and (min-width: 768px) {
-  /* line 75, ../sass/breakpoints/_base.scss */
+  /* line 78, ../sass/breakpoints/_base.scss */
   .wrap {
     width: 760px;
   }
@@ -903,7 +927,7 @@ in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 *********************/
 @media only screen and (min-width: 1030px) {
-  /* line 87, ../sass/breakpoints/_base.scss */
+  /* line 90, ../sass/breakpoints/_base.scss */
   .wrap {
     width: 1040px;
   }
@@ -1054,8 +1078,8 @@ html {
 }
 
 /* line 15, ../sass/_typography.sass */
-h1, .h1, h2, .h2, .instagram-feed figure figcaption, h3, .h3, .hero-article-list.widget a, h4, .h4, h5, .h5 {
-  font-weight: 500;
+h1, .h1, h2, .h2, h3, .h3, .hero-article-list.widget a, h4, .h4, h5, .h5 {
+  font-weight: normal;
   font-family: "robotomedium", Helvetica, sans-serif;
   text-rendering: optimizelegibility;
 }
@@ -1067,71 +1091,106 @@ h1 {
 
 /* line 23, ../sass/_typography.sass */
 h1, .h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   line-height: 1.333em;
 }
 
 /* line 27, ../sass/_typography.sass */
-h2, .h2, .instagram-feed figure figcaption {
-  font-size: 1.75em;
+h2, .h2 {
+  font-size: 1.75rem;
   line-height: 1.4em;
   margin-bottom: 0.375em;
 }
 
 /* line 32, ../sass/_typography.sass */
 h3, .h3, .hero-article-list.widget a {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 /* line 35, ../sass/_typography.sass */
 h4, .h4 {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   font-weight: 700;
 }
 
 /* line 39, ../sass/_typography.sass */
 h5, .h5 {
-  font-size: 0.846em;
+  font-size: 0.846rem;
   line-height: 2.09em;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-/* line 45, ../sass/_typography.sass */
+@media (max-width: 768px) {
+  /* line 46, ../sass/_typography.sass */
+  h1, .h1 {
+    font-size: 1.75rem;
+  }
+
+  /* line 48, ../sass/_typography.sass */
+  h2, .h2 {
+    font-size: 1.25rem;
+  }
+
+  /* line 51, ../sass/_typography.sass */
+  p, ul, ol {
+    font-size: 18px;
+  }
+
+  /* line 55, ../sass/_typography.sass */
+  .home h1, .home .h1 {
+    font-size: 2rem;
+  }
+  /* line 57, ../sass/_typography.sass */
+  .home h2, .home .h2 {
+    font-size: 1.5rem;
+  }
+  /* line 59, ../sass/_typography.sass */
+  .home h3, .home .h3, .home .hero-article-list.widget a, .hero-article-list.widget .home a {
+    font-size: 1.25rem;
+  }
+}
+/* line 62, ../sass/_typography.sass */
 strong {
   font-family: "robotobold", Helvetica, sans-serif;
 }
 
-/* line 48, ../sass/_typography.sass */
+/* line 65, ../sass/_typography.sass */
 em, blockquote, .italic {
   font-style: normal;
   font-family: "robotomediummedium_italic", Helvetica, sans-serif;
 }
 
-/* line 53, ../sass/_typography.sass */
+/* line 70, ../sass/_typography.sass */
 .offsite-link a {
   text-decoration: none;
 }
-/* line 56, ../sass/_typography.sass */
+/* line 73, ../sass/_typography.sass */
 .offsite-link a .inline-link {
   display: inline-block;
   text-decoration: underline;
 }
-/* line 60, ../sass/_typography.sass */
+/* line 77, ../sass/_typography.sass */
 .offsite-link a .icon-newtab:before {
-  font-size: 0.8em;
+  font-size: 0.7em;
   margin-left: 0.25em;
 }
+@media (max-width: 768px) {
+  /* line 77, ../sass/_typography.sass */
+  .offsite-link a .icon-newtab:before {
+    content: "";
+  }
+}
 
-/* line 64, ../sass/_typography.sass */
+/* line 84, ../sass/_typography.sass */
 .more-link {
   text-decoration: none;
 }
-/* line 67, ../sass/_typography.sass */
+/* line 87, ../sass/_typography.sass */
 .more-link.button {
   padding: 0 1em;
 }
-/* line 70, ../sass/_typography.sass */
+/* line 90, ../sass/_typography.sass */
 .more-link:after {
   content: "→";
 }
@@ -1188,22 +1247,29 @@ body {
 section {
   width: 100%;
 }
-/* line 9, ../sass/_layout.scss */
+/* line 8, ../sass/_layout.scss */
 section.alt {
   margin: 0;
 }
-/* line 13, ../sass/_layout.scss */
+@media (max-width: 768px) {
+  /* line 8, ../sass/_layout.scss */
+  section.alt {
+    padding-top: 2rem;
+  }
+}
+/* line 16, ../sass/_layout.scss */
 section .vert-align {
   display: inline-block;
-  vertical-align: middle;
+  float: none;
+  vertical-align: top;
 }
 
-/* line 20, ../sass/_layout.scss */
+/* line 24, ../sass/_layout.scss */
 .article-header .byline, .article-header .entry-title {
   margin-bottom: 0.25em;
 }
 
-/* line 24, ../sass/_layout.scss */
+/* line 28, ../sass/_layout.scss */
 iframe, object {
   width: 100%;
 }
@@ -1214,8 +1280,17 @@ iframe, object {
   float: left;
   margin-right: 1.69492%;
 }
-
 /* line 14, ../sass/_grids.scss */
+.primary.nofloat {
+  float: none;
+}
+/* line 17, ../sass/_grids.scss */
+.primary.inline-block {
+  float: none;
+  display: inline-block;
+}
+
+/* line 22, ../sass/_grids.scss */
 .secondary {
   width: 30%;
   float: left;
@@ -1223,27 +1298,27 @@ iframe, object {
   margin-left: 5%;
 }
 
-/* line 19, ../sass/_grids.scss */
+/* line 27, ../sass/_grids.scss */
 .grid-section {
   width: 30%;
   float: left;
   margin-right: 1.69492%;
 }
 
-/* line 22, ../sass/_grids.scss */
+/* line 30, ../sass/_grids.scss */
 .about-text-col {
   margin-right: 5%;
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 26, ../sass/_grids.scss */
+  /* line 34, ../sass/_grids.scss */
   .wrap {
     padding-left: 1em;
     padding-right: 1em;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* line 32, ../sass/_grids.scss */
+  /* line 40, ../sass/_grids.scss */
   .grid-section {
     width: 45%;
     float: left;
@@ -1251,19 +1326,19 @@ iframe, object {
   }
 }
 @media (max-width: 768px) {
-  /* line 37, ../sass/_grids.scss */
+  /* line 45, ../sass/_grids.scss */
   .wrap, .global-wrap {
     display: block;
   }
 
-  /* line 40, ../sass/_grids.scss */
+  /* line 48, ../sass/_grids.scss */
   .primary {
     float: none;
     margin: 0 1rem;
     width: auto;
   }
 
-  /* line 45, ../sass/_grids.scss */
+  /* line 53, ../sass/_grids.scss */
   .secondary {
     float: none;
     margin: 0 1rem;
@@ -1271,7 +1346,7 @@ iframe, object {
     width: auto;
   }
 
-  /* line 52, ../sass/_grids.scss */
+  /* line 60, ../sass/_grids.scss */
   .grid-section {
     float: none;
     margin: 0;
@@ -1300,49 +1375,60 @@ header[role=banner] {
 .home header[role=banner] {
   padding: 1rem 1rem 3rem;
 }
-/* line 16, ../sass/modules/_header.scss */
-.home a.site-logo .site-logo-type {
+/* line 15, ../sass/modules/_header.scss */
+.home .site-logo-type {
   font-size: 3rem;
 }
-/* line 19, ../sass/modules/_header.scss */
-.home a.site-logo .site-tagline {
+/* line 18, ../sass/modules/_header.scss */
+.home .site-tagline {
   display: block;
 }
 
-/* line 24, ../sass/modules/_header.scss */
+/* line 22, ../sass/modules/_header.scss */
 a.site-logo {
-  text-shadow: 2px 2px 2px #13140F;
+  text-shadow: 2px 2px 4px #13140F;
   text-decoration: none;
 }
-/* line 28, ../sass/modules/_header.scss */
-a.site-logo .site-logo-type {
+
+/* line 26, ../sass/modules/_header.scss */
+.site-logo-type {
   color: #f7ffea;
   text-decoration: none;
-  font-family: "manu_negra_regular", serif;
+  font-family: "manu_negra_regular", Helvetica, sans-serif;
   font-size: 3rem;
   line-height: 0.75;
   margin: 0.5em 0 0;
   text-transform: uppercase;
 }
-/* line 38, ../sass/modules/_header.scss */
-a.site-logo .site-tagline {
-  color: #abb29f;
-  font-family: "manu_negra_regular", serif;
+
+/* line 36, ../sass/modules/_header.scss */
+.site-tagline {
+  color: #b3b9a8;
+  font-family: "manu_negra_regular", Helvetica, sans-serif;
   font-size: 2.35rem;
+  line-height: 1;
   margin: 0;
   display: none;
 }
+
 @media (max-width: 768px) {
-  /* line 47, ../sass/modules/_header.scss */
-  a.site-logo .site-logo-type {
-    font-size: 3rem;
+  /* line 48, ../sass/modules/_header.scss */
+  .home .site-logo-type span {
+    display: block;
   }
-  /* line 50, ../sass/modules/_header.scss */
-  a.site-logo .site-tagline {
-    font-size: 2rem;
+
+  /* line 53, ../sass/modules/_header.scss */
+  .site-logo-type {
+    font-size: 2em;
+  }
+
+  /* line 56, ../sass/modules/_header.scss */
+  .site-tagline {
+    color: #f7ffea;
+    font-size: 1.85em;
+    word-wrap: normal;
   }
 }
-
 /******************************************************************
 Site Name:
 Author:
@@ -1760,69 +1846,73 @@ select {
 .recent-things li a {
   color: #9fbf00;
 }
-/* line 31, ../sass/modules/_lists.scss */
+/* line 30, ../sass/modules/_lists.scss */
 .recent-things li a:hover, .recent-things li a:focus {
   color: #00a0a5;
 }
-@media (max-width: 768px) {
-  /* line 11, ../sass/modules/_lists.scss */
-  .recent-things {
-    padding: 2rem 1rem 0;
-  }
-}
 
-/* line 40, ../sass/modules/_lists.scss */
+/* line 39, ../sass/modules/_lists.scss */
 .author-bio {
   margin-top: 5em;
   text-align: center;
 }
-/* line 44, ../sass/modules/_lists.scss */
+/* line 43, ../sass/modules/_lists.scss */
 .author-bio img {
   border-radius: 50%;
   margin-right: 2em;
 }
-/* line 48, ../sass/modules/_lists.scss */
+/* line 47, ../sass/modules/_lists.scss */
 .author-bio .author-bio-text {
   text-align: left;
 }
 @media (max-width: 768px) {
-  /* line 40, ../sass/modules/_lists.scss */
+  /* line 39, ../sass/modules/_lists.scss */
   .author-bio {
     margin-top: 0;
   }
-  /* line 55, ../sass/modules/_lists.scss */
+  /* line 54, ../sass/modules/_lists.scss */
+  .author-bio img {
+    margin-right: 0;
+  }
+  /* line 57, ../sass/modules/_lists.scss */
   .author-bio .author-bio-text {
+    font-size: 1.3em;
     padding: 0 1rem;
+    margin-bottom: 3em;
+    max-width: 480px;
+    text-align: center;
   }
 }
 
-/* line 60, ../sass/modules/_lists.scss */
+/* line 66, ../sass/modules/_lists.scss */
 .instagram-feed {
-  padding-bottom: 4rem;
+  padding: 6rem 0 5rem;
   text-align: center;
 }
-/* line 65, ../sass/modules/_lists.scss */
+/* line 70, ../sass/modules/_lists.scss */
 .instagram-feed h2 {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
-/* line 68, ../sass/modules/_lists.scss */
+/* line 73, ../sass/modules/_lists.scss */
 .instagram-feed .widget {
   text-align: center;
   width: 100%;
 }
-/* line 72, ../sass/modules/_lists.scss */
+/* line 77, ../sass/modules/_lists.scss */
 .instagram-feed figure {
-  display: inline-block;
-  margin: 0.5em;
-  position: relative;
-  overflow: hidden;
+  font-size: 20px;
 }
-/* line 78, ../sass/modules/_lists.scss */
+/* line 79, ../sass/modules/_lists.scss */
 .instagram-feed figure img {
   margin: 0;
 }
-/* line 81, ../sass/modules/_lists.scss */
+/* line 82, ../sass/modules/_lists.scss */
 .instagram-feed figure figcaption {
+  font-size: 1.5rem;
+  line-height: 1.4em;
+  font-weight: 500;
+  font-family: "robotomedium", Helvetica, sans-serif;
+  text-rendering: optimizelegibility;
   background-color: rgba(19, 20, 15, 0.85);
   color: #F5FFE4;
   margin: 0;
@@ -1832,46 +1922,132 @@ select {
   right: 0;
   bottom: 0;
   left: 0;
-  max-height: 306px;
   transition: 0.5s;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* line 98, ../sass/modules/_lists.scss */
+/* line 103, ../sass/modules/_lists.scss */
 .instagram-feed figure figcaption span {
+  display: inline-block;
   padding: 1em;
+  vertical-align: middle;
 }
-/* line 102, ../sass/modules/_lists.scss */
+/* line 109, ../sass/modules/_lists.scss */
 .instagram-feed figure a {
   display: block;
+  position: relative;
   text-decoration: none;
 }
-/* line 108, ../sass/modules/_lists.scss */
+/* line 115, ../sass/modules/_lists.scss */
 .instagram-feed figure a:hover figcaption, .instagram-feed figure a:focus figcaption {
   opacity: 1;
 }
-/* line 114, ../sass/modules/_lists.scss */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* line 121, ../sass/modules/_lists.scss */
+  .instagram-feed figure figcaption {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  /* line 126, ../sass/modules/_lists.scss */
+  .instagram-feed figure figcaption {
+    font-size: 1.45rem;
+  }
+}
+@media (max-width: 768px) {
+  /* line 131, ../sass/modules/_lists.scss */
+  .instagram-feed figure:nth-child(n+6) {
+    display: none;
+  }
+}
+/* line 136, ../sass/modules/_lists.scss */
 .instagram-feed:after {
   content: '';
   clear: both;
   display: block;
+}
+
+/* line 1, ../sass/modules/_photo_grid.scss */
+.instagram-feed {
+  /*  For responsive images */
+  /*  For responsive images as background */
+}
+/* line 2, ../sass/modules/_photo_grid.scss */
+.instagram-feed .square {
+  float: left;
+  position: relative;
+  width: 23%;
+  padding-bottom: 23%;
+  /* = width for a 1:1 aspect ratio */
+  margin: 1%;
   overflow: hidden;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* line 2, ../sass/modules/_photo_grid.scss */
+  .instagram-feed .square {
+    padding-bottom: 48%;
+    width: 48%;
+  }
+}
+@media (max-width: 768px) {
+  /* line 2, ../sass/modules/_photo_grid.scss */
+  .instagram-feed .square {
+    padding-bottom: 98%;
+    width: 98%;
+  }
+}
+/* line 20, ../sass/modules/_photo_grid.scss */
+.instagram-feed .content {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+/* line 25, ../sass/modules/_photo_grid.scss */
+.instagram-feed .table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+/* line 30, ../sass/modules/_photo_grid.scss */
+.instagram-feed .table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 37, ../sass/modules/_photo_grid.scss */
+.instagram-feed .content img {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+/* line 45, ../sass/modules/_photo_grid.scss */
+.instagram-feed [role=img] {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* you change this to "contain" if you don't want the images to be cropped */
 }
 
 /* line 1, ../sass/modules/_hero.scss */
 .hero {
-  padding-bottom: 6rem;
+  padding: 5rem 0;
 }
-/* line 4, ../sass/modules/_hero.scss */
+@media (max-width: 768px) {
+  /* line 1, ../sass/modules/_hero.scss */
+  .hero {
+    padding: 4rem 0;
+  }
+}
+/* line 8, ../sass/modules/_hero.scss */
 .hero .hero-excerpt {
   margin-bottom: 1.5em;
 }
-/* line 8, ../sass/modules/_hero.scss */
+/* line 12, ../sass/modules/_hero.scss */
 .hero .hero-links h2, .hero .hero-links h3 {
   margin: 0;
 }
-/* line 11, ../sass/modules/_hero.scss */
+/* line 15, ../sass/modules/_hero.scss */
 .hero .hero-links .more-link {
   font-size: 0.9em;
   float: none;
@@ -1879,7 +2055,7 @@ select {
   margin-top: 1.5em;
 }
 @media (min-width: 1024px) {
-  /* line 21, ../sass/modules/_hero.scss */
+  /* line 25, ../sass/modules/_hero.scss */
   .hero .hero-links .more-link {
     display: block;
     float: right;
@@ -1940,24 +2116,28 @@ POSTS & CONTENT STYLES
   list-style: disc;
   list-style-position: inside;
 }
-/* line 69, ../sass/modules/_posts.scss */
+/* line 64, ../sass/modules/_posts.scss */
+.entry-content ul, .entry-content ol {
+  line-height: 2;
+}
+/* line 72, ../sass/modules/_posts.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 76, ../sass/modules/_posts.scss */
+/* line 79, ../sass/modules/_posts.scss */
 .entry-content img {
   box-shadow: 1px 1px 3px #333;
   max-width: 100%;
   height: auto;
 }
-/* line 81, ../sass/modules/_posts.scss */
+/* line 84, ../sass/modules/_posts.scss */
 .entry-content img.no-shadow {
   box-shadow: none;
 }
-/* line 86, ../sass/modules/_posts.scss */
+/* line 89, ../sass/modules/_posts.scss */
 .entry-content .size-auto,
 .entry-content .size-full,
 .entry-content .size-large,
@@ -1966,7 +2146,7 @@ POSTS & CONTENT STYLES
   max-width: 100%;
   height: auto;
 }
-/* line 95, ../sass/modules/_posts.scss */
+/* line 98, ../sass/modules/_posts.scss */
 .entry-content pre {
   background: #323944;
   color: #f8f9fa;
@@ -1977,20 +2157,20 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 106, ../sass/modules/_posts.scss */
+/* line 109, ../sass/modules/_posts.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 112, ../sass/modules/_posts.scss */
+/* line 115, ../sass/modules/_posts.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 118, ../sass/modules/_posts.scss */
+/* line 121, ../sass/modules/_posts.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;

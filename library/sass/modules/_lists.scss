@@ -26,7 +26,6 @@
 
 		a {
 			color: $alt_href_color;
-			// text-decoration: none;
 
 			&:hover, &:focus {
 				color: $active_color;
@@ -34,7 +33,7 @@
 		}
 	}
 	@media #{$mobile} {
-		padding: $default_padding*2 $default_padding 0;
+		// padding: $default_padding*2 $default_padding 0;
 	}
 }
 .author-bio {
@@ -51,35 +50,42 @@
 
 	@media #{$mobile} {
 		margin-top: 0;
-
+		
+		img {
+			margin-right: 0;
+		}
 		.author-bio-text {
+			font-size: 1.3em;
 			padding: 0 $default_padding;
+			margin-bottom: 3em;
+			max-width: 480px;
+			text-align: center;
 		}
 	}
 }
 .instagram-feed {
-	@extend .padded-top;
-	padding-bottom: $default_padding*4;
+	padding: $default_padding*6 0 $default_padding*5;
 	text-align: center;
 	
 	h2 {
-		margin-bottom: 1em;
+		margin-bottom: 1rem;
 	}
 	.widget {
 		text-align: center;
 		width: 100%;
 	}
 	figure {
-		display: inline-block;
-		margin: 0.5em;
-		position: relative;
-		overflow: hidden;
-		
+		font-size: 20px;
 		img {
 			margin: 0;
 		}
 		figcaption {
-			@extend .h2;
+			font-size: 1.5rem;
+		  line-height: 1.4em;
+		  font-weight: 500;
+		  font-family: $headline_font;
+		  text-rendering: optimizelegibility;
+
 			background-color: rgba($foreground_color, 0.85);
 			color: $background_color;
 			margin: 0;
@@ -89,25 +95,41 @@
 			right: 0;
 			bottom: 0;
 			left: 0;
-			max-height: 306px;
 			transition: 0.5s;
 			display: flex;
 		  align-items: center;
 		  justify-content: center;
 
 			span {
+				display: inline-block;
 				padding: 1em;
+				vertical-align: middle;
 			}
 		}
 		a {
 			display: block;
+			position: relative;
 			text-decoration: none;
 
 			&:hover, &:focus {
-
 				figcaption {
 					opacity: 1;
 				}
+			}
+		}
+		@media #{$tablet} {
+			figcaption {
+				font-size: 1.25rem;
+			}
+		}
+		@media #{$laptop} {
+			figcaption {
+				font-size: 1.45rem;
+			}
+		}
+		@media #{$mobile} {
+			&:nth-child(n+6){
+				display: none;
 			}
 		}
 	}
@@ -115,6 +137,9 @@
 		content: '';
 		clear: both;
 		display: block;
-		overflow: hidden;
+	}
+	@media #{$mobile} {
+		// padding: $default_padding*5
 	}
 }
+@import "modules/photo_grid";

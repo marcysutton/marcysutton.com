@@ -4,7 +4,7 @@ $default_font: 'robotomedium', Helvetica, sans-serif
 $italic_font: 'robotomediummedium_italic', Helvetica, sans-serif
 $bold_font: 'robotobold', Helvetica, sans-serif
 $headline_font: $default_font
-$site_title_font: 'manu_negra_regular', serif 
+$site_title_font: 'manu_negra_regular', Helvetica, sans-serif 
 
 html
   font-family: $default_font
@@ -13,34 +13,51 @@ html
   -webkit-font-smoothing: antialiased
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5
-  font-weight: 500
+  font-weight: normal
   font-family: $headline_font
   text-rendering: optimizelegibility
 
 h1
   margin-top: 0
-  
+
 h1, .h1
-  font-size: 2.5em
+  font-size: 2.5rem
   line-height: 1.333em
 
 h2, .h2
-  font-size: 1.75em
+  font-size: 1.75rem
   line-height: 1.4em
   margin-bottom: 0.375em
 
 h3, .h3
-  font-size: 1.25em
+  font-size: 1.25rem
 
 h4, .h4
-  font-size: 1.1em
+  font-size: 1.1rem
   font-weight: 700
 
 h5, .h5
-  font-size: 0.846em
+  font-size: 0.846rem
   line-height: 2.09em
   text-transform: uppercase
   letter-spacing: 2px
+
+@media #{$mobile}
+  h1, .h1
+    font-size: 1.75rem
+  h2, .h2
+    font-size: 1.25rem
+  
+  p, ul, ol
+    font-size: 18px
+
+  .home
+    h1, .h1
+      font-size: 2rem
+    h2, .h2
+      font-size: 1.5rem
+    h3, .h3
+      font-size: 1.25rem
 
 strong
   font-family: $bold_font
@@ -58,8 +75,11 @@ em, blockquote, .italic
       text-decoration: underline
 
     .icon-newtab:before
-      font-size: 0.8em
+      font-size: 0.7em
       margin-left: 0.25em
+
+      @media #{$mobile}
+        content: ''
 
 .more-link
   text-decoration: none

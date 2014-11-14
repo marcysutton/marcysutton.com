@@ -1,258 +1,79 @@
-@charset "UTF-8";
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: IE Stylesheet
-
-So instead of using the respond.js file to add media query support
-to IE, we're going to use SASS to create an easily readable css file.
-Here, we import all the styles the standard stylesheet gets, only
-without the media queries. No need to worry about editing anything!
-
-******************************************************************/
-/******************************************************************
-IMPORTS & DEPENDENCIES
-Remember, all the BASE styles are called already since IE can
-read those. Below, we need to import only the stuff IE can't
-understand (what's inside the media queries). We also need to
-import the mixins file so SASS can understand the variables.
-******************************************************************/
-@font-face {
-  font-family: "robotomedium";
-  src: url('../../fonts/roboto-medium-webfont.eot?1415696608') format('embedded-opentype'), url('../../fonts/roboto-medium-webfont.eot?&1415696608#iefix') format('embedded-opentype'), url('../../fonts/roboto-medium-webfont.woff2?1415696608') format('woff2'), url('../../fonts/roboto-medium-webfont.woff?1415696608') format('woff'), url('../../fonts/roboto-medium-webfont.ttf?1415696608') format('truetype'), url('../../fonts/roboto-medium-webfont.svg?1415696608#robotomedium') format('svg');
-}
-@font-face {
-  font-family: "robotobold";
-  src: url('../../fonts/roboto-bold-webfont.eot?1415739198') format('embedded-opentype'), url('../../fonts/roboto-bold-webfont.eot?&1415739198#iefix') format('embedded-opentype'), url('../../fonts/roboto-bold-webfont.woff2?1415739198') format('woff2'), url('../../fonts/roboto-bold-webfont.woff?1415739198') format('woff'), url('../../fonts/roboto-bold-webfont.ttf?1415739198') format('truetype'), url('../../fonts/roboto-bold-webfont.svg?1415739198#robotobold') format('svg');
-}
-@font-face {
-  font-family: "robotomediummedium_italic";
-  src: url('../../fonts/roboto-mediumitalic-webfont.eot?1415696608') format('embedded-opentype'), url('../../fonts/roboto-mediumitalic-webfont.eot?&1415696608#iefix') format('embedded-opentype'), url('../../fonts/roboto-mediumitalic-webfont.woff2?1415696608') format('woff2'), url('../../fonts/roboto-mediumitalic-webfont.woff?1415696608') format('woff'), url('../../fonts/roboto-mediumitalic-webfont.ttf?1415696608') format('truetype'), url('../../fonts/roboto-mediumitalic-webfont.svg?1415696608#robotomedium_italic') format('svg');
-}
-@font-face {
-  font-family: "manu_negra_regular";
-  src: url('../../fonts/wcmanonegrabta-webfont.eot?1415710958') format('embedded-opentype'), url('../../fonts/wcmanonegrabta-webfont.eot?&1415710958#iefix') format('embedded-opentype'), url('../../fonts/wcmanonegrabta-webfont.woff2?1415710958') format('woff2'), url('../../fonts/wcmanonegrabta-webfont.woff?1415710958') format('woff'), url('../../fonts/wcmanonegrabta-webfont.ttf?1415710958') format('truetype'), url('../../fonts/wcmanonegrabta-webfont.svg?1415710958#wc_mano_negra_btaregular') format('svg');
-}
-@font-face {
-  font-family: "icomoon";
-  src: url('../../fonts/icomoon.eot?-xsbv7j&1415784292') format('embedded-opentype'), url('../../fonts/icomoon.eot?&1415784292#iefix-xsbv7j') format('embedded-opentype'), url('../../fonts/icomoon.woff?-xsbv7j&1415784292') format('woff'), url('../../fonts/icomoon.ttf?-xsbv7j&1415784292') format('truetype'), url('../../fonts/icomoon.svg?-xsbv7j&1415784292#icomoon') format('svg');
-}
-/* line 12, ../sass/utils/_webfonts.sass */
-[class^="icon-"], [class*=" icon-"] {
-  font-family: "icomoon";
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* line 23, ../sass/utils/_webfonts.sass */
-.icon-newtab:before {
-  content: "";
-}
-
-/* line 9, ../sass/_typography.sass */
-html {
-  font-family: "robotomedium", Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* line 15, ../sass/_typography.sass */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-  font-weight: 500;
-  font-family: "robotomedium", Helvetica, sans-serif;
-  text-rendering: optimizelegibility;
-}
-
-/* line 20, ../sass/_typography.sass */
-h1 {
-  margin-top: 0;
-}
-
-/* line 23, ../sass/_typography.sass */
-h1, .h1 {
-  font-size: 2.5em;
-  line-height: 1.333em;
-}
-
-/* line 27, ../sass/_typography.sass */
-h2, .h2 {
-  font-size: 1.75em;
-  line-height: 1.4em;
-  margin-bottom: 0.375em;
-}
-
-/* line 32, ../sass/_typography.sass */
-h3, .h3 {
-  font-size: 1.25em;
-}
-
-/* line 35, ../sass/_typography.sass */
-h4, .h4 {
-  font-size: 1.1em;
-  font-weight: 700;
-}
-
-/* line 39, ../sass/_typography.sass */
-h5, .h5 {
-  font-size: 0.846em;
-  line-height: 2.09em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* line 45, ../sass/_typography.sass */
-strong {
-  font-family: "robotobold", Helvetica, sans-serif;
-}
-
-/* line 48, ../sass/_typography.sass */
-em, blockquote, .italic {
-  font-style: normal;
-  font-family: "robotomediummedium_italic", Helvetica, sans-serif;
-}
-
-/* line 53, ../sass/_typography.sass */
-.offsite-link a {
-  text-decoration: none;
-}
-/* line 56, ../sass/_typography.sass */
-.offsite-link a .inline-link {
-  display: inline-block;
-  text-decoration: underline;
-}
-/* line 60, ../sass/_typography.sass */
-.offsite-link a .icon-newtab:before {
-  font-size: 0.8em;
-  margin-left: 0.25em;
-}
-
-/* line 64, ../sass/_typography.sass */
-.more-link {
-  text-decoration: none;
-}
-/* line 67, ../sass/_typography.sass */
-.more-link.button {
-  padding: 0 1em;
-}
-/* line 70, ../sass/_typography.sass */
-.more-link:after {
-  content: "→";
-}
-
-/* line 39, ../sass/_variables.scss */
-.muted {
-  color: #abb29f;
-}
-
-/* line 3, ../sass/_color.sass */
-html, body {
-  background-color: #F5FFE4;
-  color: #13140F;
-}
-
-/* line 7, ../sass/_color.sass */
-a, button {
-  transition: 0.5s;
-}
-
-/* line 10, ../sass/_color.sass */
-a {
-  color: #13140F;
-}
-/* line 13, ../sass/_color.sass */
-a:focus, a:hover {
-  color: #00a0a5;
-}
-/* line 16, ../sass/_color.sass */
-a:link {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
-}
-
-/* line 20, ../sass/_color.sass */
-.offsite-link .icon-newtab:before {
-  color: #abb29f;
-}
-
-/* line 24, ../sass/_color.sass */
-.alt .more-link {
-  color: #abb29f;
-}
-
-/* line 27, ../sass/_color.sass */
-.more-link.button {
-  background-color: #9fbf00;
-  box-shadow: 1px 1px 2px #898987;
-}
-/* line 31, ../sass/_color.sass */
-.more-link.button:hover, .more-link.button:focus {
-  background-color: #00a0a5;
-  color: #F5FFE4;
-}
-
-/* line 35, ../sass/_color.sass */
-.byline {
-  color: #71726f;
-}
-
-/* line 38, ../sass/_color.sass */
-button {
-  border: 1px solid;
-}
-/* line 41, ../sass/_color.sass */
-button:focus, button:hover {
-  border-color: #13140F;
-  background-color: #13140F;
-  color: #F5FFE4;
-}
-
-/* line 46, ../sass/_color.sass */
-.alt {
-  background-color: #333;
-  color: #F5FFE4;
-}
-
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: IE Grid Styles
-
-Since the example grid is based on media queries, so rather than
-setup some js library that would make IE8 and below understand
-media queries, let's just add some styles that serves a fixed grid.
-
-Again, if you want to roll your own, just remove this junk and put
-whatever you use in here.
-
-******************************************************************/
 /*
-you can call the larger styles if you want, but there's really no need
+Error: Undefined variable: "$mobile".
+        on line 45 of /Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/v4/library/sass/_typography.sass
+        from line 26 of /Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/v4/library/sass/ie.scss
+
+40: These fixes are now ONLY seen by IE, so you don't have to worry
+41: about using prefixes, although it's best practice. For more info
+42: on using Modernizr classes, check out this link:
+43: http://www.modernizr.com/docs/
+44: ******************************************************************\/
+45: 
+46: /*
+47: For example, you can use something like:
+48: 
+49: .no-textshadow .class { ... }
+50: 
+
+Backtrace:
+/Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/v4/library/sass/_typography.sass:45
+/Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/v4/library/sass/ie.scss:26
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/script/tree/interpolation.rb:100:in `_perform'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:526:in `block in run_interp_no_strip'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:524:in `map'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:524:in `run_interp_no_strip'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:531:in `run_interp'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:499:in `visit_media'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:315:in `map'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:88:in `block in with_import'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:88:in `with_import'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/root_node.rb:20:in `render'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/engine.rb:268:in `render'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:491:in `update_stylesheet'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:469:in `on_file_changed'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/listen-2.7.9/lib/listen/listener.rb:276:in `call'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/listen-2.7.9/lib/listen/listener.rb:276:in `_process_changes'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/listen-2.7.9/lib/listen/listener.rb:233:in `block in _wait_for_changes'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/listen-2.7.9/lib/listen/listener.rb:216:in `loop'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/listen-2.7.9/lib/listen/listener.rb:216:in `_wait_for_changes'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/listen-2.7.9/lib/listen/listener.rb:312:in `block in _start_wait_thread'
 */
-/******************************************************************
-ADDITIONAL IE FIXES
-These fixes are now ONLY seen by IE, so you don't have to worry
-about using prefixes, although it's best practice. For more info
-on using Modernizr classes, check out this link:
-http://www.modernizr.com/docs/
-******************************************************************/
-/*
-For example, you can use something like:
-
-.no-textshadow .class { ... }
-
-You can also target specific versions by using the classes applied to
-the html element. These can sometimes change, so take a look inside the
-header.php file to see what they are:
-
-
-.lt-ie8 .class { ... }
-
-*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$mobile\".\A         on line 45 of /Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/v4/library/sass/_typography.sass\A         from line 26 of /Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/v4/library/sass/ie.scss\A \A 40: These fixes are now ONLY seen by IE, so you don't have to worry\A 41: about using prefixes, although it's best practice. For more info\A 42: on using Modernizr classes, check out this link:\A 43: http://www.modernizr.com/docs/\A 44: ******************************************************************/\A 45: \A 46: /*\A 47: For example, you can use something like:\A 48: \A 49: .no-textshadow .class { ... }\A 50: "; }

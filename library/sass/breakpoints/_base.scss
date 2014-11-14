@@ -36,6 +36,9 @@ section, .flexgroup {
 	justify-content: left;
 	flex-wrap: nowrap;
 }
+section.noflex {
+	display: block;
+}
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's

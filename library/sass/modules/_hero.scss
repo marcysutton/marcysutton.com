@@ -1,5 +1,9 @@
 .hero {
-	padding-bottom: $default_padding*6;
+	padding: $default_padding*5 0;
+
+	@media #{$mobile} {
+		padding: $default_padding*4 0;
+	}
 
 	.hero-excerpt {
 		margin-bottom: 1.5em;

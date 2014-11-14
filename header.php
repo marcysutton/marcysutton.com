@@ -18,9 +18,12 @@
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta property="og:url" content="<?php echo "http://" . $_SERVER['HTTP_HOST']  . $_SERVER['REQUEST_URI']; ?>" /> 
-		<?php if(is_single()){ $desc = ''; } else { $desc = 'The personal website of Marcy Sutton, Web Developer and Accessibility Advocate';} ?>
-		<meta property="og:description" content="<?php echo $desc; ?>" />
+		<?php $site_desc = 'Musings about code, accessibility, music, cycling and life.'; ?>
+		<?php if(is_single()){ $desc = ''; } else { $desc = $site_desc;} ?>
 		<meta name="description" content="<?php echo $desc; ?>" />
+		<meta property="og:title" content="MarcySutton.com" />
+		<meta property="og:description" content="<?php echo $desc; ?>" />
+		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/library/images/ms-facebook-image-600.jpg" />
 		<link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/library/images/ms-facebook-image-600.jpg" /> 
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -31,7 +34,7 @@
 
 		<?php include('header-sharing.php'); ?>
 
-		<script src="<?php echo get_template_directory_uri(); ?>/library/js/instafeed.min.js"></script>
+	<?php /*	<script src="<?php echo get_template_directory_uri(); ?>/library/js/instafeed.min.js"></script> */ ?>
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -41,14 +44,16 @@
 			<header class="header" role="banner">
 
 				<div id="inner-header" class="wrap cf">
-					<?php if(is_home()):
+					<?php if(is_front_page()):
 							$tag_name = 'h1';
 						else :
 							$tag_name = 'p';
 						endif;
 					?>
 					<a class="site-logo" href="<?php echo home_url(); ?>" rel="nofollow">
-						<<?php echo $tag_name; ?> class="site-logo-type h1"><?php bloginfo('name'); ?></<?php echo $tag_name; ?>>
+						<<?php echo $tag_name; ?> class="site-logo-type h1">
+							<span>Marcy</span> <span>Sutton.com</span>
+						</<?php echo $tag_name; ?>>
 						<p class="site-tagline"><?php bloginfo('description'); ?></p>
 					</a>
 

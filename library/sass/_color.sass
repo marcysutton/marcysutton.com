@@ -1,8 +1,10 @@
 // Color Variables
 
 html, body
-	background-color: $background_color
 	color: $foreground_color
+
+	@media #{$mobile}
+		background-color: $alt_background_color
 			
 a, button
 	transition: 0.5s
