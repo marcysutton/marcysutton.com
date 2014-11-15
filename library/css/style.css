@@ -1310,7 +1310,7 @@ iframe, object {
   margin-right: 5%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
   /* line 34, ../sass/_grids.scss */
   .wrap {
     padding-left: 1em;
@@ -1334,19 +1334,28 @@ iframe, object {
   /* line 48, ../sass/_grids.scss */
   .primary {
     float: none;
-    margin: 0 1rem;
+    margin: 0;
     width: auto;
   }
 
   /* line 53, ../sass/_grids.scss */
   .secondary {
     float: none;
-    margin: 0 1rem;
+    margin: 0;
     padding-top: 3rem;
     width: auto;
   }
 
   /* line 60, ../sass/_grids.scss */
+  .home .alt .wrap {
+    text-align: center;
+  }
+  /* line 63, ../sass/_grids.scss */
+  .home .alt .wrap .primary {
+    text-align: left;
+  }
+
+  /* line 69, ../sass/_grids.scss */
   .grid-section {
     float: none;
     margin: 0;
@@ -1853,15 +1862,16 @@ select {
 
 /* line 39, ../sass/modules/_lists.scss */
 .author-bio {
-  margin-top: 5em;
+  margin-top: 4em;
   text-align: center;
 }
 /* line 43, ../sass/modules/_lists.scss */
 .author-bio img {
   border-radius: 50%;
+  max-width: 200px;
   margin-right: 2em;
 }
-/* line 47, ../sass/modules/_lists.scss */
+/* line 48, ../sass/modules/_lists.scss */
 .author-bio .author-bio-text {
   text-align: left;
 }
@@ -1870,11 +1880,11 @@ select {
   .author-bio {
     margin-top: 0;
   }
-  /* line 54, ../sass/modules/_lists.scss */
+  /* line 55, ../sass/modules/_lists.scss */
   .author-bio img {
     margin-right: 0;
   }
-  /* line 57, ../sass/modules/_lists.scss */
+  /* line 58, ../sass/modules/_lists.scss */
   .author-bio .author-bio-text {
     font-size: 1.3em;
     padding: 0 1rem;
@@ -1884,29 +1894,29 @@ select {
   }
 }
 
-/* line 66, ../sass/modules/_lists.scss */
+/* line 67, ../sass/modules/_lists.scss */
 .instagram-feed {
   padding: 6rem 0 5rem;
   text-align: center;
 }
-/* line 70, ../sass/modules/_lists.scss */
+/* line 71, ../sass/modules/_lists.scss */
 .instagram-feed h2 {
   margin-bottom: 1rem;
 }
-/* line 73, ../sass/modules/_lists.scss */
+/* line 74, ../sass/modules/_lists.scss */
 .instagram-feed .widget {
   text-align: center;
   width: 100%;
 }
-/* line 77, ../sass/modules/_lists.scss */
+/* line 78, ../sass/modules/_lists.scss */
 .instagram-feed figure {
   font-size: 20px;
 }
-/* line 79, ../sass/modules/_lists.scss */
+/* line 80, ../sass/modules/_lists.scss */
 .instagram-feed figure img {
   margin: 0;
 }
-/* line 82, ../sass/modules/_lists.scss */
+/* line 83, ../sass/modules/_lists.scss */
 .instagram-feed figure figcaption {
   font-size: 1.5rem;
   line-height: 1.4em;
@@ -1927,41 +1937,41 @@ select {
   align-items: center;
   justify-content: center;
 }
-/* line 103, ../sass/modules/_lists.scss */
+/* line 104, ../sass/modules/_lists.scss */
 .instagram-feed figure figcaption span {
   display: inline-block;
   padding: 1em;
   vertical-align: middle;
 }
-/* line 109, ../sass/modules/_lists.scss */
+/* line 110, ../sass/modules/_lists.scss */
 .instagram-feed figure a {
   display: block;
   position: relative;
   text-decoration: none;
 }
-/* line 115, ../sass/modules/_lists.scss */
+/* line 116, ../sass/modules/_lists.scss */
 .instagram-feed figure a:hover figcaption, .instagram-feed figure a:focus figcaption {
   opacity: 1;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* line 121, ../sass/modules/_lists.scss */
+  /* line 122, ../sass/modules/_lists.scss */
   .instagram-feed figure figcaption {
     font-size: 1.25rem;
   }
 }
 @media (min-width: 768px) {
-  /* line 126, ../sass/modules/_lists.scss */
+  /* line 127, ../sass/modules/_lists.scss */
   .instagram-feed figure figcaption {
     font-size: 1.45rem;
   }
 }
 @media (max-width: 768px) {
-  /* line 131, ../sass/modules/_lists.scss */
+  /* line 132, ../sass/modules/_lists.scss */
   .instagram-feed figure:nth-child(n+6) {
     display: none;
   }
 }
-/* line 136, ../sass/modules/_lists.scss */
+/* line 137, ../sass/modules/_lists.scss */
 .instagram-feed:after {
   content: '';
   clear: both;
@@ -2031,23 +2041,25 @@ select {
 
 /* line 1, ../sass/modules/_hero.scss */
 .hero {
-  padding: 5rem 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 @media (max-width: 768px) {
   /* line 1, ../sass/modules/_hero.scss */
   .hero {
-    padding: 4rem 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
-/* line 8, ../sass/modules/_hero.scss */
+/* line 10, ../sass/modules/_hero.scss */
 .hero .hero-excerpt {
   margin-bottom: 1.5em;
 }
-/* line 12, ../sass/modules/_hero.scss */
+/* line 14, ../sass/modules/_hero.scss */
 .hero .hero-links h2, .hero .hero-links h3 {
   margin: 0;
 }
-/* line 15, ../sass/modules/_hero.scss */
+/* line 17, ../sass/modules/_hero.scss */
 .hero .hero-links .more-link {
   font-size: 0.9em;
   float: none;
@@ -2055,7 +2067,7 @@ select {
   margin-top: 1.5em;
 }
 @media (min-width: 1024px) {
-  /* line 25, ../sass/modules/_hero.scss */
+  /* line 27, ../sass/modules/_hero.scss */
   .hero .hero-links .more-link {
     display: block;
     float: right;
@@ -2071,12 +2083,45 @@ POSTS & CONTENT STYLES
   padding-bottom: 2rem;
 }
 /* line 8, ../sass/modules/_posts.scss */
+.entry-content blockquote {
+  padding-left: 1.5em;
+  margin-left: 0;
+  border-left: 3px solid #abb29f;
+}
+/* line 20, ../sass/modules/_posts.scss */
+.entry-content ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+/* line 24, ../sass/modules/_posts.scss */
+.entry-content p, .entry-content ul, .entry-content ol {
+  font-size: 1.15em;
+  line-height: 1.75;
+}
+/* line 33, ../sass/modules/_posts.scss */
+.entry-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em;
+}
+/* line 40, ../sass/modules/_posts.scss */
+.entry-content img {
+  box-shadow: 1px 1px 3px #333;
+  max-width: 100%;
+  height: auto;
+}
+/* line 45, ../sass/modules/_posts.scss */
+.entry-content img.no-shadow {
+  box-shadow: none;
+}
+/* line 50, ../sass/modules/_posts.scss */
 .entry-content table {
   width: 100%;
   border: 1px solid #eaedf2;
   margin-bottom: 1.5em;
 }
-/* line 13, ../sass/modules/_posts.scss */
+/* line 55, ../sass/modules/_posts.scss */
 .entry-content table caption {
   margin: 0 0 7px;
   font-size: 0.75em;
@@ -2084,60 +2129,34 @@ POSTS & CONTENT STYLES
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 22, ../sass/modules/_posts.scss */
+/* line 64, ../sass/modules/_posts.scss */
 .entry-content tr {
   border-bottom: 1px solid #eaedf2;
 }
-/* line 25, ../sass/modules/_posts.scss */
+/* line 67, ../sass/modules/_posts.scss */
 .entry-content tr:nth-child(even) {
   background-color: #f8f9fa;
 }
-/* line 30, ../sass/modules/_posts.scss */
+/* line 72, ../sass/modules/_posts.scss */
 .entry-content td {
   padding: 7px;
   border-right: 1px solid #eaedf2;
 }
-/* line 34, ../sass/modules/_posts.scss */
+/* line 76, ../sass/modules/_posts.scss */
 .entry-content td:last-child {
   border-right: 0;
 }
-/* line 39, ../sass/modules/_posts.scss */
+/* line 81, ../sass/modules/_posts.scss */
 .entry-content th {
   background-color: #f8f9fa;
   border-bottom: 1px solid #eaedf2;
   border-right: 1px solid #eaedf2;
 }
-/* line 44, ../sass/modules/_posts.scss */
+/* line 86, ../sass/modules/_posts.scss */
 .entry-content th:last-child {
   border-right: 0;
 }
-/* line 60, ../sass/modules/_posts.scss */
-.entry-content ul {
-  list-style: disc;
-  list-style-position: inside;
-}
-/* line 64, ../sass/modules/_posts.scss */
-.entry-content ul, .entry-content ol {
-  line-height: 2;
-}
-/* line 72, ../sass/modules/_posts.scss */
-.entry-content dd {
-  margin-left: 0;
-  font-size: 0.9em;
-  color: #787878;
-  margin-bottom: 1.5em;
-}
-/* line 79, ../sass/modules/_posts.scss */
-.entry-content img {
-  box-shadow: 1px 1px 3px #333;
-  max-width: 100%;
-  height: auto;
-}
-/* line 84, ../sass/modules/_posts.scss */
-.entry-content img.no-shadow {
-  box-shadow: none;
-}
-/* line 89, ../sass/modules/_posts.scss */
+/* line 90, ../sass/modules/_posts.scss */
 .entry-content .size-auto,
 .entry-content .size-full,
 .entry-content .size-large,
@@ -2146,7 +2165,7 @@ POSTS & CONTENT STYLES
   max-width: 100%;
   height: auto;
 }
-/* line 98, ../sass/modules/_posts.scss */
+/* line 99, ../sass/modules/_posts.scss */
 .entry-content pre {
   background: #323944;
   color: #f8f9fa;
@@ -2157,20 +2176,20 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 109, ../sass/modules/_posts.scss */
+/* line 110, ../sass/modules/_posts.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 115, ../sass/modules/_posts.scss */
+/* line 116, ../sass/modules/_posts.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 121, ../sass/modules/_posts.scss */
+/* line 122, ../sass/modules/_posts.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;

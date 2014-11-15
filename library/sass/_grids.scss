@@ -30,7 +30,7 @@ $susy: (
 .about-text-col {
 	margin-right: span(5%);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 960px) {
 	.wrap {
 		padding-left: 1em;
 		padding-right: 1em;
@@ -47,14 +47,23 @@ $susy: (
 	}
 	.primary {
 		float: none;
-		margin: 0 1rem;
+		margin: 0;
 		width: auto;
 	}
 	.secondary {
 		float: none;
-		margin: 0 1rem;
+		margin: 0;
 		padding-top: $default_padding*3;
 		width: auto;
+	}
+	.home {
+		.alt .wrap {
+			text-align: center;
+
+			.primary {
+				text-align: left;
+			}
+		}
 	}
 
 	.grid-section {

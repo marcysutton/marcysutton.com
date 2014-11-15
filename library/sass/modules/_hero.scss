@@ -1,8 +1,10 @@
 .hero {
-	padding: $default_padding*5 0;
+	padding-top: $default_padding*5;
+	padding-bottom: $default_padding*5;
 
 	@media #{$mobile} {
-		padding: $default_padding*4 0;
+		padding-top: $default_padding*4;
+		padding-bottom: $default_padding*4;
 	}
 
 	.hero-excerpt {

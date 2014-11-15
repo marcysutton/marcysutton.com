@@ -35,7 +35,7 @@
 					<div class="hero-article-list">
 						<h2 class="widgettitle">Articles</h2>
 						<ul>
-						<?php $my_query = new WP_Query( 'tag=article&posts_per_page=5' );
+						<?php $my_query = new WP_Query( 'tag=article&posts_per_page=6' );
 						while ( $my_query->have_posts() ) : $my_query->the_post(); 
 							$do_not_duplicate = $post->ID; ?>
 							<li class="article-title"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></li>
@@ -91,7 +91,8 @@
 		    $size = 'thumbnail';
 		    // // Get the image URL using the author ID and image size params
 		    // $imgURL = get_cupp_meta($user_id, $size);
-		    $imgURL = 'http://192.168.5.3/wp-content/uploads/2014/11/10604531_681401495168_4704074685700904284_o-150x150.jpg';
+		    
+		    $imgURL = "http://marcysutton.com/images/marcy-wally-porch.jpg";
 		    // Print the image on the page 
 		    echo '<img src="'. $imgURL .'" alt="Marcy Sutton">'; ?>
 				<h3 class="h2 author-bio-text"><em><?php the_author_meta('description'); ?></em></h3>

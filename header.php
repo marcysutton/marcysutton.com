@@ -11,7 +11,28 @@
 		<?php // force Internet Explorer to use the latest rendering engine available ?>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<title><?php wp_title(''); ?></title>
+		<title><?php
+	/*
+	 * Print the <title> tag based on what is being viewed.
+	 */
+	global $page, $paged;
+
+	wp_title( '|', true, 'right' );
+
+	// Add the blog name.
+	bloginfo( 'name' );
+
+	// Add the blog description for the home/front page.
+	$site_description = get_bloginfo( 'description', 'display' );
+	// echo $site_description;
+	if ( $site_description && ( is_home() || is_front_page() ) )
+		echo " | $site_description";
+
+	// Add a page number if necessary:
+	if ( $paged >= 2 || $page >= 2 )
+		echo ' // ' . sprintf( __( 'Page %s', 'msnextgen' ), max( $paged, $page ) );
+
+	?></title>
 
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
@@ -21,7 +42,10 @@
 		<?php $site_desc = 'Musings about code, accessibility, music, cycling and life.'; ?>
 		<?php if(is_single()){ $desc = ''; } else { $desc = $site_desc;} ?>
 		<meta name="description" content="<?php echo $desc; ?>" />
-		<meta property="og:title" content="MarcySutton.com" />
+		<?php 
+			$share_title = get_the_title() . ' | ' . 'MarcySutton.com';
+		?>
+		<meta property="og:title" content="<?php echo $share_title; ?>" />
 		<meta property="og:description" content="<?php echo $desc; ?>" />
 		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/library/images/ms-facebook-image-600.jpg" />
 		<link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/library/images/ms-facebook-image-600.jpg" /> 
@@ -44,7 +68,7 @@
 			<header class="header" role="banner">
 
 				<div id="inner-header" class="wrap cf">
-					<?php if(is_front_page()):
+					<?php if( is_home() || is_front_page() ):
 							$tag_name = 'h1';
 						else :
 							$tag_name = 'p';

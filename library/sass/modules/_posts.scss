@@ -5,6 +5,48 @@ POSTS & CONTENT STYLES
 	.entry-content {
 		padding-bottom: $default_padding*2;
 
+		blockquote {
+			padding-left: 1.5em;
+			// padding: 0 0 0 0.75em;
+			margin-left: 0;
+			border-left: 3px solid $shaded_white;
+			// font-style: italic;
+			// color: $meta-gray;
+
+			&:before {}
+
+		}
+		
+		ul {
+			list-style: disc;
+			list-style-position: inside;
+		}
+		p, ul, ol {
+			font-size: 1.15em;
+			line-height: 1.75;
+		}
+
+		dl {}
+
+		dt {}
+
+		dd {
+			margin-left: 0;
+			font-size: 0.9em;
+			color: #787878;
+			margin-bottom: 1.5em;
+		}
+
+		img {
+			box-shadow: 1px 1px 3px #333;
+			max-width: 100%;
+			height: auto;
+
+			&.no-shadow {
+				box-shadow: none;
+			}
+		}
+
 		table {
 			width: 100%;
 			border: 1px solid $gray;
@@ -45,47 +87,6 @@ POSTS & CONTENT STYLES
 				border-right: 0;
 			}
 		}
-
-		blockquote {
-			// margin: 0 0 1.5em 0.75em;
-			// padding: 0 0 0 0.75em;
-			// border-left: 3px solid;
-			// font-style: italic;
-			// color: $meta-gray;
-
-			&:before {}
-
-		}
-		
-		ul {
-			list-style: disc;
-			list-style-position: inside;
-		}
-		ul, ol {
-			line-height: 2;
-		}
-
-		dl {}
-
-		dt {}
-
-		dd {
-			margin-left: 0;
-			font-size: 0.9em;
-			color: #787878;
-			margin-bottom: 1.5em;
-		}
-
-		img {
-			box-shadow: 1px 1px 3px #333;
-			max-width: 100%;
-			height: auto;
-
-			&.no-shadow {
-				box-shadow: none;
-			}
-		}
-
 		.size-auto,
 		.size-full,
 		.size-large,
