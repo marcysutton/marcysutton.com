@@ -10,17 +10,63 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
-.nav {
-	border-bottom: 0;
-	margin: 0;
+@import "compass/css3";
 
+#global-menu {
+	@extend %icon;
+	@extend .icon-list;
+	background-color: transparent;
+	border: 0;
+	color: $white;
+	display: block;
+	font-size: 3em;
+	line-height: 1;
+	margin: auto 0 auto auto;
+  @include transition(all 300ms);
+
+  &:before {
+  	text-shadow: 2px 2px 2px #333;
+  }
+}
+body.active #global-menu {
+	background-color: $nav_background_color;
+	color: $white;
+
+  &:before {
+  	text-shadow: none;
+  }
+}
+body.active nav#global-nav { 
+	right: 0px; 
+}
+
+nav#global-nav {
+	background-color: $nav_background_color;
+	box-shadow: -10px 3px 20px $nav_background_color;
+	bottom: 0;
+	max-width: 286px;
+	position: fixed;
+	top: 0;
+	right: -100px;
+	width: 100%;
+	z-index: 0;
+	@include transition(all 300ms);
+	
+	ul {
+		margin: 0;
+		padding: 1em 0 0;
+	}
 	li {
+		border-bottom: 1px solid tint($nav_background_color, 10%);
+		padding: 0;
+		margin: 0;
+		width: 100%;
 
 		a {
 			display: block;
 			color: $white;
 			text-decoration: none;
-			padding: 0.75em;
+			padding: 1.5em 0 1.5em 1.5em;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -29,7 +75,10 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
-
+				background-color: tint($nav_background_color, 10%);
+			}
+			&:active {
+				color: $alt_href_color;
 			}
 		}
 

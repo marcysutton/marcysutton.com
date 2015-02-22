@@ -7,9 +7,10 @@
 						<main>
 						<section class="wrap">
 							<div class="wrap padded-top">
+
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'primary' ); ?> itemscope itemtype="http://schema.org/BlogPosting">
 
 								<header class="article-header">
 
@@ -66,6 +67,7 @@
 									</article>
 
 							<?php endif; ?>
+							<?php get_sidebar(); ?>
 						</div>
 						</section>
 						</main>

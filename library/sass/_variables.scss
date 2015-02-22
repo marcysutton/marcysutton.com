@@ -2,6 +2,7 @@ $background_color: 	#F5FFE4;
 $foreground_color: 	#13140F;
 $alt_background_color: #333;
 $alt_foreground_color: #68776C;
+$nav_background_color: $alt_background_color;
 $shaded_white:			shade($background_color, 30%);
 $tinted_black:			tint($foreground_color, 40%);
 $href_color: 				$foreground_color;
@@ -37,5 +38,5 @@ $disabled-gray:     #cfcfcf;
 $default_padding: 	1rem;
 
 .muted {
-	color: $shaded_white;
+	color: $alt_foreground_color;
 }

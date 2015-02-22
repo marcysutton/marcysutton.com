@@ -1,5 +1,6 @@
 // +font-face("robotoitalic", font-files( "roboto-italic-webfont.eot", "roboto-italic-webfont.eot?#iefix", "roboto-italic-webfont.woff2", "roboto-italic-webfont.woff", "roboto-italic-webfont.ttf", "roboto-italic-webfont.svg#robotoitalic" ))
 //+font-face("robotoregular", font-files( "roboto-regular-webfont.eot", "roboto-regular-webfont.eot?#iefix", "roboto-regular-webfont.woff2", "roboto-regular-webfont.woff", "roboto-regular-webfont.ttf", "roboto-regular-webfont.svg#robotoregular" ))
+@import compass/css3
 
 +font-face("robotomedium", font-files( "roboto-medium-webfont.eot", "roboto-medium-webfont.eot?#iefix", "roboto-medium-webfont.woff2", "roboto-medium-webfont.woff", "roboto-medium-webfont.ttf", "roboto-medium-webfont.svg#robotomedium" ))
 +font-face("robotobold", font-files( "roboto-bold-webfont.eot", "roboto-bold-webfont.eot?#iefix", "roboto-bold-webfont.woff2", "roboto-bold-webfont.woff", "roboto-bold-webfont.ttf", "roboto-bold-webfont.svg#robotobold" ))
@@ -9,7 +10,7 @@
 
 +font-face("icomoon", font-files( "icomoon.eot?-xsbv7j", "icomoon.eot?#iefix-xsbv7j", "icomoon.woff?-xsbv7j", "icomoon.ttf?-xsbv7j", "icomoon.svg?-xsbv7j#icomoon" ))
 
-[class^="icon-"], [class*=" icon-"]
+[class^="icon-"], [class*=" icon-"], %icon:before, %icon:after
 	font-family: 'icomoon'
 	speak: none
 	font-style: normal
@@ -22,3 +23,12 @@
 
 .icon-newtab:before 
 	content: "\e600"
+
+.icon-list:before 
+	content: "\e601"
+
+.icon-arrow-right:after 
+	content: "\e602"
+	display: inline-block
+	margin-left: 0.5em
+	vertical-align: middle

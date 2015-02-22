@@ -1,0 +1,23 @@
+.page-id-1200 {
+	h1 {
+		margin-bottom: 0;
+	}
+}
+.talks { 
+	
+
+	.post {
+		display: inline-block;
+		margin-top: 3em;
+		width: 46%;
+		vertical-align: top;
+
+		&:nth-child(2n-1) {
+			margin-right: 4%;
+		}
+	}
+
+	h2 {
+		font-size: 1.25em;
+	}
+}

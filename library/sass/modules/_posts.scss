@@ -4,6 +4,16 @@ POSTS & CONTENT STYLES
 	
 	.entry-content {
 		padding-bottom: $default_padding*2;
+		
+		.top-margin {
+			margin-top: 1em;
+		}
+		.no-margin {
+			margin-top: 0;
+		}
+		.no-padding {
+			padding-top: 1.5em;
+		}
 
 		blockquote {
 			padding-left: 1.5em;
@@ -45,6 +55,9 @@ POSTS & CONTENT STYLES
 			&.no-shadow {
 				box-shadow: none;
 			}
+		}
+		iframe.twitter-timeline {
+			width: 100% !important;
 		}
 
 		table {
@@ -97,9 +110,9 @@ POSTS & CONTENT STYLES
 		}
 
 		pre {
-			background: $black;
+			background: #1d1f21;
 			color: $light-gray;
-			font-size: 0.9em;
+			font-size: 1em;
 			padding: 1.5em;
 			margin: 0 0 1.5em;
 			border-radius: 3px;

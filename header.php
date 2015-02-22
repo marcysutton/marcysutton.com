@@ -47,8 +47,17 @@
 		?>
 		<meta property="og:title" content="<?php echo $share_title; ?>" />
 		<meta property="og:description" content="<?php echo $desc; ?>" />
-		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/library/images/ms-facebook-image-600.jpg" />
-		<link rel="image_src" href="<?php echo get_template_directory_uri(); ?>/library/images/ms-facebook-image-600.jpg" /> 
+		<?php
+			if ( has_post_thumbnail() ) {
+				$thumbnail_id = get_post_thumbnail_id();
+				$share_image = wp_get_attachment_url( $thumbnail_id );
+			}
+			else {
+				$share_image = get_template_directory_uri() . '/library/images/ms-facebook-image-600.jpg';
+			}
+		?>
+		<meta property="og:image" content="<?php echo $share_image; ?>" />
+		<link rel="image_src" href="<?php echo $share_image; ?>" /> 
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
@@ -58,46 +67,46 @@
 
 		<?php include('header-sharing.php'); ?>
 
-	<?php /*	<script src="<?php echo get_template_directory_uri(); ?>/library/js/instafeed.min.js"></script> */ ?>
+	<script src="<?php echo get_template_directory_uri(); ?>/library/js/instafeed.min.js"></script>
 	</head>
 
 	<body <?php body_class(); ?>>
+		<nav role="navigation" id="global-nav" tabIndex="-1">
+			<?php wp_nav_menu(array(
+				'container' => false,                           // remove nav container
+				'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+				'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+				'menu_class' => 'nav top-nav cf',               // adding custom nav class
+				'theme_location' => 'main-nav',                 // where it's located in the theme
+				'before' => '',                                 // before the menu
+  			'after' => '',                                  // after the menu
+  			'link_before' => '',                            // before each link
+  			'link_after' => '',                             // after each link
+  			'depth' => 0,                                   // limit the depth of the nav
+				'fallback_cb' => ''                             // fallback function (if there is one)
+			)); ?>
 
+		</nav>
 		<div id="container">
 
 			<header class="header" role="banner">
 
 				<div id="inner-header" class="wrap cf">
+					<div class="header-flex">
 					<?php if( is_home() || is_front_page() ):
 							$tag_name = 'h1';
 						else :
 							$tag_name = 'p';
 						endif;
 					?>
-					<a class="site-logo" href="<?php echo home_url(); ?>" rel="nofollow">
-						<<?php echo $tag_name; ?> class="site-logo-type h1">
-							<span>Marcy</span> <span>Sutton.com</span>
-						</<?php echo $tag_name; ?>>
-						<p class="site-tagline"><?php bloginfo('description'); ?></p>
-					</a>
-
-					<nav role="navigation">
-						<?php wp_nav_menu(array(
-    					'container' => false,                           // remove nav container
-    					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					'theme_location' => 'main-nav',                 // where it's located in the theme
-    					'before' => '',                                 // before the menu
-        			'after' => '',                                  // after the menu
-        			'link_before' => '',                            // before each link
-        			'link_after' => '',                             // after each link
-        			'depth' => 0,                                   // limit the depth of the nav
-    					'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
-
-					</nav>
-
+						<a class="site-logo" href="<?php echo home_url(); ?>" rel="nofollow" tabIndex="1">
+							<<?php echo $tag_name; ?> class="site-logo-type h1">
+								<span>Marcy</span> <span>Sutton.com</span>
+							</<?php echo $tag_name; ?>>
+							<p class="site-tagline"><?php bloginfo('description'); ?></p>
+						</a>
+						
+						<button id="global-menu" aria-controls="global-nav" tabIndex="2"><span class="offscreen">Menu</span></button>
+					</div>
 				</div>
-
 			</header>

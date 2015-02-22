@@ -150,6 +150,7 @@ aside, .sidebar {
 	}
 
 	.widget {
+		margin-bottom: 4em;
 		padding: 0 10px;
 		// margin: 2.2em 0;
 
@@ -254,7 +255,9 @@ aside, .sidebar {
 	.screen-reader-text {}
 
 	/* text widget */
-	.textwidget {}
+	.textwidget {
+		margin-bottom: 4em;
+	}
 	.widget_text {}
 	.textwidget p {}
 

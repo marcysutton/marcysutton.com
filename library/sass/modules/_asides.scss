@@ -3,10 +3,22 @@ SIDEBARS & ASIDES
 *********************/
 
 aside, .sidebar {}
+	
+	#instafeed figure {
+		margin-bottom: 2em;
 
+		figcaption {
+			font-family: robotomediummedium_italic;
+			font-size: 0.85em;
+		}
+	}
+	.textwidget {
+		margin-bottom: 3em;
+	}
 	.widgettitle {}
 
 	.widget {
+		margin-bottom: 4em;
 
 		ul {
 

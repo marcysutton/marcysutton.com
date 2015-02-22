@@ -1,80 +1,26 @@
+/******************************************************************
+Theme Name: Marcy Sutton v4
+Theme URI: http://marcysutton.com
+Description: This site was built using the Bones Development Theme. For more information about Bones or to view documentation, you can visit the <a href="https://github.com/eddiemachado/bones/issues" title="Bones Issues">Bones Issues</a> page on Github. You'll want to customize this for your clients with your own information.
+Author: Marcy Sutton
+Author URI: http://marcysutton.com
+Version: 1.7
+Tags: fluid-layout, responsive-layout, accessibility-ready, translation-ready, microformats, rtl-language-support
+
+License: WTFPL
+License URI: http://sam.zoy.org/wtfpl/
+
+******************************************************************/
+
 /*
-Error: Invalid CSS after "...**************\/": expected identifier, was ""
-        on line 15 of /Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/bones/library/sass/_typography.sass
-        from line 9 of /Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/bones/library/sass/style.scss
-
-10: 
-11: @import "variables";
-12: @import "color";
-13: 
-14: // import mixins
-15: @import "mixins";
-16: 
-17: // the grid
-18: @import "grid";
-19: 
-20: // the grid
-
-Backtrace:
-/Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/bones/library/sass/_typography.sass:15
-/Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/bones/library/sass/style.scss:9
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/scss/parser.rb:1163:in `expected'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/scss/parser.rb:1099:in `expected'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/scss/parser.rb:1079:in `expr!'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/scss/static_parser.rb:145:in `reference_combinator'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/scss/static_parser.rb:139:in `combinator'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/scss/static_parser.rb:119:in `selector'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/scss/static_parser.rb:86:in `selector_comma_sequence'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/scss/parser.rb:1077:in `expr!'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/scss/static_parser.rb:20:in `parse_selector'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:414:in `visit_rule'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:315:in `map'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:88:in `block in with_import'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:88:in `with_import'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/root_node.rb:20:in `render'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/engine.rb:268:in `render'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:491:in `update_stylesheet'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:469:in `on_file_changed'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/listen-2.7.9/lib/listen/listener.rb:276:in `call'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/listen-2.7.9/lib/listen/listener.rb:276:in `_process_changes'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/listen-2.7.9/lib/listen/listener.rb:233:in `block in _wait_for_changes'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/listen-2.7.9/lib/listen/listener.rb:216:in `loop'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/listen-2.7.9/lib/listen/listener.rb:216:in `_wait_for_changes'
-/Users/marcys/.rvm/gems/ruby-2.1.2/gems/listen-2.7.9/lib/listen/listener.rb:312:in `block in _start_wait_thread'
+WordPress Probz
+So Theme Check (http://wordpress.org/plugins/theme-check/)
+is constantly telling me that it needs these classes in the CSS even
+though they are in the REAL stylesheet in library/css/style.css.
+So we're gonna drop these here to keep it happy.
+Great work, Theme Check (eye roll)
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...**************/\": expected identifier, was \"\"\A         on line 15 of /Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/bones/library/sass/_typography.sass\A         from line 9 of /Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/bones/library/sass/style.scss\A \A 10: \A 11: @import \"variables\";\A 12: @import \"color\";\A 13: \A 14: // import mixins\A 15: @import \"mixins\";\A 16: \A 17: // the grid\A 18: @import \"grid\";\A 19: \A 20: // the grid"; }
+
+.sticky {}          /* DO NOT EDIT THIS */
+.gallery-caption {} /* THESE ARE USELESS */
+.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */

@@ -1,9 +1,5 @@
 /*! Made with Bones: http://themble.com/bones :) */
-
-$mobile: "(max-width: 768px)";
-$tablet: "(min-width: 768px) and (max-width: 1023px)";
-$laptop: "(min-width: 768px)";
-$desktop: "(min-width: 1024px)";
+@import "breakpoints";
 
 // normalize: http://necolas.github.io/normalize.css/
 @import "normalize";
@@ -38,6 +34,8 @@ you hate oysters, then the world is your peanut butter & jelly sandwich.
 *********************/
 
 @import "modules/header";
+
+@import "modules/asides";
 // alert boxes
 @import "modules/alerts";
 

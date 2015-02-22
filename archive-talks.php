@@ -27,15 +27,16 @@
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'primary' ); ?>>
 
-								<header class="article-header">
+<!-- 								<header class="article-header">
 
 									<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 									</header>
-
+ -->
 								<section class="entry-content cf">
 
 									<?php the_excerpt(); ?>
-
+									
+									<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 								</section>
 
 								<footer class="article-footer">

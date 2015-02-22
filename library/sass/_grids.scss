@@ -9,7 +9,8 @@ $susy: (
 );
 
 .primary {
-	@include span(60%);
+	@include span(64%);
+	margin-right: 0;
 
 	&.nofloat {
 		float: none;
@@ -22,6 +23,12 @@ $susy: (
 .secondary {
 	@include span(30%);
 	margin-left: span(5%);
+	margin-right: 0;
+
+	&.left {
+		margin-left: 0;
+		margin-right: span(5%);
+	}
 }
 
 .grid-section {

@@ -1,0 +1,85 @@
+/*
+Error: Undefined variable: "$mobile".
+        on line 45 of /Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/v4/library/sass/_typography.sass
+        from line 26 of /Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/v4/library/sass/ie.scss
+
+40: These fixes are now ONLY seen by IE, so you don't have to worry
+41: about using prefixes, although it's best practice. For more info
+42: on using Modernizr classes, check out this link:
+43: http://www.modernizr.com/docs/
+44: ******************************************************************\/
+45: 
+46: /*
+47: For example, you can use something like:
+48: 
+49: .no-textshadow .class { ... }
+50: 
+
+Backtrace:
+/Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/v4/library/sass/_typography.sass:45
+/Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/v4/library/sass/ie.scss:26
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/script/tree/interpolation.rb:100:in `_perform'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:526:in `block in run_interp_no_strip'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:524:in `map'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:524:in `run_interp_no_strip'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:531:in `run_interp'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:499:in `visit_media'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:315:in `map'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:88:in `block in with_import'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:88:in `with_import'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:79:in `block in with_base'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:115:in `with_frame'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/stack.rb:79:in `with_base'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/tree/root_node.rb:20:in `render'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/engine.rb:268:in `render'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:491:in `update_stylesheet'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/sass-3.4.7/lib/sass/plugin/compiler.rb:293:in `watch'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/compass-1.0.1/lib/compass/sass_compiler.rb:46:in `watch!'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/compass-1.0.1/lib/compass/commands/watch_project.rb:41:in `perform'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/compass-1.0.1/lib/compass/commands/base.rb:18:in `execute'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/compass-1.0.1/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/compass-1.0.1/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/compass-1.0.1/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/compass-1.0.1/bin/compass:30:in `block in <top (required)>'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/compass-1.0.1/bin/compass:44:in `call'
+/Users/marcys/.rvm/gems/ruby-2.1.2/gems/compass-1.0.1/bin/compass:44:in `<top (required)>'
+/Users/marcys/.rvm/gems/ruby-2.1.2/bin/compass:23:in `load'
+/Users/marcys/.rvm/gems/ruby-2.1.2/bin/compass:23:in `<main>'
+/Users/marcys/.rvm/gems/ruby-2.1.2/bin/ruby_executable_hooks:15:in `eval'
+/Users/marcys/.rvm/gems/ruby-2.1.2/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$mobile\".\A         on line 45 of /Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/v4/library/sass/_typography.sass\A         from line 26 of /Users/marcys/Sites/MarcySutton.com/v4-newest!/wp-content/themes/v4/library/sass/ie.scss\A \A 40: These fixes are now ONLY seen by IE, so you don't have to worry\A 41: about using prefixes, although it's best practice. For more info\A 42: on using Modernizr classes, check out this link:\A 43: http://www.modernizr.com/docs/\A 44: ******************************************************************/\A 45: \A 46: /*\A 47: For example, you can use something like:\A 48: \A 49: .no-textshadow .class { ... }\A 50: "; }

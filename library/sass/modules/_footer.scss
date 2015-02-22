@@ -11,6 +11,7 @@ FOOTER STYLES
 
 	a {
 		color: $alt_href_color;
+		margin-right: 0.25em;
 
 		&:hover, &:focus {
 			color: $active_color;
@@ -19,6 +20,10 @@ FOOTER STYLES
 	@media #{$mobile} {
 		a {
 			display: block;
+		}
+
+		span {
+			display: none;
 		}
 	}
 }

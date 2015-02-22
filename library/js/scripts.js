@@ -1,19 +1,4 @@
 /*
- * Bones Scripts File
- * Author: Eddie Machado
- *
- * This file should contain any js scripts you want to add to the site.
- * Instead of calling it in the header or throwing it inside wp_head()
- * this file will be called automatically in the footer so as not to
- * slow the page load.
- *
- * There are a lot of example functions and tools in here. If you don't
- * need any of it, just remove it. They are meant to be helpers and are
- * not required. It's your world baby, you can do whatever you want.
-*/
-
-
-/*
  * Get Viewport Dimensions
  * returns object with viewport dimensions to match css in width and height properties
  * ( source: http://andylangton.co.uk/blog/development/get-viewport-size-width-and-height-javascript )
@@ -43,17 +28,7 @@ var waitForFinalEvent = (function () {
 // how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
 var timeToWaitForLast = 100;
 
-
 /*
- * Here's an example so you can see how we're using the above function
- *
- * This is commented out so it won't work, but you can copy it and
- * remove the comments.
- *
- *
- *
- * If we want to only do it on a certain page, we can setup checks so we do it
- * as efficient as possible.
  *
  * if( typeof is_home === "undefined" ) var is_home = $('body').hasClass('home');
  *
@@ -76,18 +51,10 @@ var timeToWaitForLast = 100;
  *
  *    }, timeToWaitForLast, "your-function-identifier-string"); }
  * });
- *
- * Pretty cool huh? You can create functions like this to conditionally load
- * content and other stuff dependent on the viewport.
- * Remember that mobile devices and javascript aren't the best of friends.
- * Keep it light and always make sure the larger viewports are doing the heavy lifting.
- *
 */
 
 /*
- * We're going to swap out the gravatars.
- * In the functions.php file, you can see we're not loading the gravatar
- * images on mobile to save bandwidth. Once we hit an acceptable viewport
+ * Swap out the gravatar images on mobile to save bandwidth. Once we hit an acceptable viewport
  * then we can swap out those images since they are located in a data attribute.
 */
 function loadGravatars() {
@@ -99,19 +66,50 @@ function loadGravatars() {
     jQuery(this).attr('src',jQuery(this).attr('data-gravatar'));
   });
 	}
-} // end function
+} 
 
+var MS = {};
 
-/*
- * Put all your regular jQuery in here.
-*/
+MS.App = (function(){
+
+  var ESCAPE_CODE = 27;
+
+  var navButton = jQuery('#global-menu'),
+      navMenu = jQuery('#global-nav');
+  var navLinks = navMenu.find('a');
+
+  function doStuff() {
+    navMenu.on('keydown', handleKeydown);
+    navButton.on('click', handleClick);
+    navLinks.attr('tabIndex', '-1');
+  }
+  function handleKeydown(event) {
+    if(event.keyCode === ESCAPE_CODE) {
+      document.body.classList.toggle('active');
+      navButton.focus();
+    }
+  }
+  function handleClick(event) {
+    if(document.body.classList.contains('active')) {
+      document.body.classList.remove('active');
+      navLinks.attr('tabIndex', '-1');
+    }
+    else {
+      document.body.classList.add('active');
+      navLinks.eq(0).focus();
+      navLinks.removeAttr('tabIndex');
+    }
+  }
+
+  return {
+    init: function(){
+      doStuff();
+    }
+  }
+})();
+
 jQuery(document).ready(function($) {
-
-  /*
-   * Let's fire off the gravatar function
-   * You can remove this if you don't need it
-  */
   loadGravatars();
 
-
-}); /* end of as page load scripts */
+  new MS.App.init();
+});

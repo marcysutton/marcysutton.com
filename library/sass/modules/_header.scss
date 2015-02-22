@@ -2,10 +2,17 @@ header[role=banner] {
 	background-image: url(../../img/blurryWall.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	box-shadow: -3px 3px 6px $foreground_color;
+	box-shadow: -1px 3px 6px $foreground_color;
 	padding: 1em;
-	position: relative;
 	text-align: left;
+
+	#inner-header {
+		position: relative;
+	}
+	.header-flex {
+		display: -webkit-flex;
+		display: flex;
+	}
 }
 
 .home {

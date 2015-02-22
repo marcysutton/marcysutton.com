@@ -71,7 +71,7 @@ em, blockquote, .italic
     text-decoration: none
     
     .inline-link
-      display: inline-block
+      display: inline
       text-decoration: underline
 
     .icon-newtab:before
@@ -82,10 +82,9 @@ em, blockquote, .italic
         content: ''
 
 .more-link
+  @extend %icon
+  @extend .icon-arrow-right
   text-decoration: none
 
   &.button
     padding: 0 1em
-
-  &:after
-    content: '\2192'

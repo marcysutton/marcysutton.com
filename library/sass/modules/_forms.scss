@@ -1,20 +1,20 @@
-/******************************************************************
-Site Name:
-Author:
+/* Contact form plugin */
 
-Stylesheet: Form Styles
+#cntctfrm_contact_form {
+  .cntctfrm_label, .cntctfrm_input, .cntctfrm_select, .cntctfrm_checkbox {
+    max-width: 100%;
+  }
+  input {
+    max-width: 100%;
+  }
+  label .required:after {
+    content: 'required';
+    display: block;
+    left: -50000px;
+    position: absolute;
+  }
+}
 
-We put all the form and button styles in here to setup a consistent
-look. If we need to customize them, we can do this in the main
-stylesheets and just override them. Easy Peasy.
-
-You're gonna see a few data-uri thingies down there. If you're not
-sure what they are, check this link out:
-http://css-tricks.com/data-uris/
-If you want to create your own, use this helpful link:
-http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
-
-******************************************************************/
 
 /*********************
 INPUTS
@@ -38,28 +38,28 @@ input[type="color"],
 select,
 textarea,
 .field {
+  box-shadow: inset 1px 1px 1px #ccc;
+  background-color: $white;
+  border: 0;
+  border-radius: 3px;
+  color: $foreground_color;
   display: block;
+  font-family: $default_font;
+  font-size: 1em;
   height: 40px;
   line-height: 40px;
-  padding: 2px 12px;
-  margin-bottom: 14px;
-  font-size: 1em;
-  color: $foreground_color;
-  border-radius: 3px;
-  vertical-align: middle;
-  box-shadow: none;
-  border: 0;
-  width: 100%;
   max-width: 400px;
-  font-family: $default_font;
-  background-color: tint($alt_foreground_color, 50%);
+  margin-bottom: 14px;
+  padding: 2px 12px;
+  vertical-align: middle;
+  width: 100%;
   @include transition(background-color 0.24s ease-in-out);
 
-  // a focused input (or hovered on)
-  &:focus,
-  &:active {
-    background-color: tint($alt_foreground_color, 40%);
-  } // end hover or focus
+  // // a focused input (or hovered on)
+  // &:focus,
+  // &:active {
+  //   background-color: transparent;
+  // } // end hover or focus
 
   // error notification
   &.error,

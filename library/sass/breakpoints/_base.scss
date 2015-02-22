@@ -10,7 +10,6 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
-
 @import "modules/navigation";
 @import "modules/asides";
 @import "modules/footer";
@@ -19,6 +18,24 @@ and will be used across all viewports.
 /*********************
 LAYOUT & GRID STYLES
 *********************/
+#container {
+	background-image: url(../../img/sprinkles.png);
+  background-repeat: repeat;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	z-index: 1;
+	@include transition(all 300ms);
+}
+body.active div#container { 
+	right: 284px; 
+}
+body.active #global-menu { 
+	right: 294px; 
+}
 
 .wrap {
 	height: 100%;
@@ -31,6 +48,7 @@ LAYOUT & GRID STYLES
 }
 section, .flexgroup {
 	flex: 1;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: row;
 	justify-content: left;
@@ -47,6 +65,13 @@ tweeners.
 *********************/
 @media only screen and (min-width: 481px) {
 	.entry-content {
+
+		.floated-instagram-images {
+			img {
+				margin-right: 1em;
+				margin-bottom: 1em;
+			}
+		}
 		/* at this larger size, we can start to align images */
 		.alignleft, img.alignleft {
 			margin-right: 1.5em;

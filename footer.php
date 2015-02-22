@@ -18,10 +18,9 @@
 						)); ?>
 					</nav> 
 					<p class="source-org copyright">
-						&copy; 2003-<?php echo date('Y'); ?> Marcy Sutton. 
-						<a href="http://twitter.com/marcysutton" target="_blank" title="Link opens in a new window">
-							@MarcySutton on Twitter<span class="visuallyhidden"> Link opens in a new window</span></a> 
-						<a style="display: none;" href="/about">About</a></p>
+						&copy; 2003-<?php echo date('Y'); ?>  
+						Marcy Sutton. 
+						<span aria-hidden="true"> • </span><a href="<?php get_site_url(); ?>/about/">About</a><span aria-hidden="true"> • </span><a href="<?php get_site_url(); ?>/contact/">Contact</a></p>
 				</div>
 
 			</footer>

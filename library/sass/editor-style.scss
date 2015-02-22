@@ -15,10 +15,12 @@ http://codex.wordpress.org/Editor_Style
 /* Wrap the entire post style inside the TinyMCE selector, as suggested
 here http://codex.wordpress.org/Function_Reference/add_editor_style */
 body#tinymce.wp-editor {
+	
+	@import "breakpoints";
 
 	// normalize: http://necolas.github.io/normalize.css/
 	@import "normalize";
-	@import "compass/css3/font-face";
+	// @import "compass/css3/font-face";
 	// Sass variables
 	@import "variables";
 

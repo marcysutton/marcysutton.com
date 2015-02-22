@@ -14,8 +14,8 @@
 			<section class="wrap hero padded-top">
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'primary' ); ?>>
 
-					<?php $my_query = new WP_Query( 'post_type=talk&posts_per_page=1' );
-					while ( $my_query->have_posts() ) : $my_query->the_post(); 
+					<?php $hero_query = new WP_Query( 'post_type=talk&posts_per_page=1' );
+					while ( $hero_query->have_posts() ) : $hero_query->the_post(); 
 						$do_not_duplicate = $post->ID; ?>
 					
 					<div class="hero-excerpt">
@@ -26,20 +26,22 @@
 						<h2>Latest Talk</h2>
 						<h3>
 							<a href="<?php the_permalink(); ?>" class="inline-title"><?php the_title(); ?></a> 
-							<!-- <a href="<?php get_site_url(); ?>/talks" title="More talks" class="more-link button">More talks</a> -->
+							<a href="<?php get_site_url(); ?>/talks/" class="more-link button">More talks</a>
 						</h3>
 					</div>
-					<?php endwhile; ?>			
+					<?php endwhile; 
+					wp_reset_postdata(); ?>			
 				</article>
 				<aside class="secondary">
 					<div class="hero-article-list">
 						<h2 class="widgettitle">Articles</h2>
 						<ul>
-						<?php $my_query = new WP_Query( 'tag=article&posts_per_page=6' );
-						while ( $my_query->have_posts() ) : $my_query->the_post(); 
+						<?php $hero_links_query = new WP_Query( 'tag=article&posts_per_page=6' );
+						while ( $hero_links_query->have_posts() ) : $hero_links_query->the_post(); 
 							$do_not_duplicate = $post->ID; ?>
 							<li class="article-title"><h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3></li>
-						<?php endwhile; ?>	
+						<?php endwhile; 
+						wp_reset_postdata(); ?>	
 						</ul>
 						</div>
 				</aside>
@@ -52,9 +54,9 @@
 				<div class="recent-things">
 				<h2>Recent Links</h2>
 				<ul>
-		 <?php $query = new WP_Query( 'post_type=link&posts_per_page=5' ); ?>
-		 <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
-		 $do_not_duplicate = $post->ID; ?>
+		 <?php $links_query = new WP_Query( 'post_type=link&posts_per_page=5' ); ?>
+		 <?php if ( $links_query->have_posts() ) : while ( $links_query->have_posts() ) : $links_query->the_post(); 
+		 $do_not_duplicate = $the_post->ID; ?>
 					<li>
 						<h3 class="h2 recent-thing-title offsite-link">
 						<a href="<?php echo the_permalink(); ?>" title="Link opens in a new window">
@@ -63,22 +65,24 @@
 							<span class="visuallyhidden">Link opens in a new window</span>
 						</a></h3>
 					</li>
-		<?php endwhile; ?>
-					<!-- <li><a href="#" class="more-link">More links</a></li> -->
+		<?php endwhile; 
+		wp_reset_postdata(); ?>
+					<!-- <li><a href="<?php get_site_url(); ?>/links/" class="more-link">More links</a></li> -->
 				</ul>
 
 				<h2>Blog Posts</h2>
 				<ul>
-				<?php $my_query = new WP_Query( 'tag=blog&posts_per_page=2' );
-						while ( $my_query->have_posts() ) : $my_query->the_post(); 
-						$do_not_duplicate = $post->ID;
+				<?php $blog_query = new WP_Query( 'tag=blog&posts_per_page=2' );
+						while ( $blog_query->have_posts() ) : $blog_query->the_post(); 
+						$do_not_duplicate = $the_post->ID;
 						?>
 					<li>
 						<h3 class="h2 recent-thing-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<p class="recent-thing-date"><?php the_date(); ?></p>
 					</li>
-		<?php endwhile; ?>
-					<!-- <li><a href="#" class="more-link">More posts</a></li> -->
+		<?php endwhile; 
+		wp_reset_postdata(); ?>
+					<!-- <li><a href="<?php get_site_url(); ?>/posts/" class="more-link">More posts</a></li> -->
 				</ul>
 				</div>
 		<?php endif; ?>
@@ -93,8 +97,11 @@
 		    // $imgURL = get_cupp_meta($user_id, $size);
 		    
 		    $imgURL = "http://marcysutton.com/images/marcy-wally-porch.jpg";
-		    // Print the image on the page 
+		    // Print the image on the page ?>
+		    <a href="<?php get_site_url(); ?>/about/"> 
+		    <?php
 		    echo '<img src="'. $imgURL .'" alt="Marcy Sutton">'; ?>
+		    </a>
 				<h3 class="h2 author-bio-text"><em><?php the_author_meta('description'); ?></em></h3>
 				</figure>
 			</aside>
@@ -135,7 +142,7 @@
 					<div class="content">
 						<div class="table">
 							<div class="table-cell">
-								<a href="http://instagram.com/p/vMbILtSXr1/">
+								<a href="http://instagram.com/p/tOik8pyXpv/">
 									<img src="http://photos-e.ak.instagram.com/hphotos-ak-xfa1/1889239_779631985433292_374494398_a.jpg" alt="Magical mountain-bike trails in my home state of Washington.">
 									<figcaption>
 										<span>Magical mountain-bike trails in my home state of Washington.</span>
@@ -205,7 +212,7 @@
 					<div class="content">
 						<div class="table">
 							<div class="table-cell">
-								<a href="http://instagram.com/p/vHAUpLSXhr/">
+								<a href="http://instagram.com/p/s9fZvhyXrz/">
 									<img src="http://scontent-a-sea.cdninstagram.com/hphotos-xap1/t51.2885-15/10683942_854007421277645_2091129091_a.jpg" alt="Abflug: Frankfurt. Flying home from JSConf EU in Berlin">
 									<figcaption>
 										<span>Abflug: Frankfurt. Flying home from JSConf EU in Berlin</span>
